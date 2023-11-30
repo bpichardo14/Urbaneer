@@ -1,0 +1,256 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f0f0f0;
+}
+
+/* Simulate the iPhone outline */
+.phone-outline {
+  width: 375px; /* iPhone width */
+  height: 812px; /* iPhone height */
+  margin: auto;
+  border-radius: 40px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  overflow: hidden;
+  background: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Status Bar */
+.status-bar {
+  width: 100%;
+  height: 45px; /* Increased height */
+  background: black; /* iOS status bar is typically black */
+  color: white;
+  font-size: 10px; /* Reduced font size */
+  line-height: 40px; /* Adjusted line height for vertical centering */
+  padding: 0 15px; /* Increased horizontal padding */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* App Header */
+.app-header {
+  background-color: #fff;
+  text-align: center;
+  padding: 10px ;
+}
+
+.app-title {
+  color: #c99f25; /* Yellow color for the title */
+  margin: 0;
+  font-size: 30px;
+}
+
+/* Global Navigation */
+.global-nav {
+  background-color: #fff;
+  border-bottom: 2px solid #eee;
+  padding: 8px 0;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: 16px;
+}
+
+.nav-item {
+  padding: 10px 15px;
+}
+
+.nav-item.active {
+  position: relative; /* Position relative to allow absolute positioning of pseudo-elements */
+  padding: 10px px;
+}
+
+.nav-item.active::after {
+  content: '';
+  display: block;
+  width: 15%; /* Adjust this value to control the length of the underline */
+  height: 3px;
+  background-color: black; /* The color of the underline */
+  position: absolute;
+  bottom: 3px; /* Adjust this value to move the line closer to the text */
+  left: 50%; /* Start from the middle */
+  transform: translateX(-50%); /* Center the element */
+}
+
+/* Main Content */
+.content {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+/* Placeholder for the map and other contents */
+.placeholder {
+  background: #eaeaea;
+  height: 150px;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+.placeholder-text {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Bottom Navigation Bar */
+.navigation-bar {
+  height: 70px;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #d1d1d1;
+}
+
+.navigation-bar div {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Sample icons for navigation bar */
+.icon {
+  display: block;
+  margin: auto;
+  height: 20px;
+  width: 20px;
+  background: black;
+}
+
+/* Additional styles for icons and user icon */
+.icon, .user-icon {
+  height: 24px; /* Adjust as needed */
+  width: 24px; /* Adjust as needed */
+}
+
+.user-icon {
+  position: absolute;
+  top: 62px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+}
+
+/* Update navigation bar to account for images */
+.navigation-bar div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-bar img {
+  margin-bottom: 4px; /* Space between icon and text */
+}
+
+/* You may need to adjust padding and margins for proper alignment */
+
+.map-container {
+  position: relative;
+  width: calc(100% - 30px); /* Full width minus margin */
+  height: 21vh; /* Adjust height as necessary */
+  margin: 15px auto; /* Center the container */
+  overflow: hidden; /* Ensures nothing spills outside the container */
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-color: #eaeaea; /* Placeholder color if the image fails to load */
+  margin-bottom: 30px;
+}
+
+.map-image {
+  width: 100%; /* Ensures the image takes full width of the container */
+  height: 100%; /* Ensures the image takes full height of the container */
+  object-fit: cover; /* Ensures the image covers the entire container */
+  display: block; /* Removes any extra space below the image */
+}
+
+.places-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5px; /* Adjusts the space between the cards */
+  padding: 0;
+}
+
+.place-card {
+  background-color: #fff;
+  margin: 1px;
+  flex-basis: calc(50% - 15px); /* Adjust the width for two cards per line */
+  box-shadow: none; /* Removes any shadow to avoid visible lines */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.place-image {
+  width: 60%; /* Sets the image width to cover the card width */
+  height: 80px; /* Sets a fixed height for a square shape */
+  object-fit: cover;
+  border-radius: 10px; /* Rounds the corners of the images only */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer;
+}
+
+.place-image:hover {
+  transform: scale(1.05); /* Slightly enlarge image on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.place-info {
+  padding: 8px;
+  text-align: center;
+  width: 100%; /* Ensures the text aligns with the edges of the image */
+}
+
+.place-info h3,
+.place-info p {
+  margin: 5px 0; /* Keep the reduced vertical space */
+  font-size: 13px; /* Adjust font size as needed */
+  line-height: 0.9; /* Adjust line height for better readability */
+}
+
+.place-detail-image {
+  width: 300px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+  margin: 20px auto; /* Center the image */
+  display: block; /* Ensures the image is a block-level element */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+.place-detail-info {
+  text-align: left; /* Aligns text to the left */
+  padding: 0 20px; /* Adds padding around the text */
+  margin-top: 10px; /* Adds space between the image and the text */
+  background-color: #f8f8f8; /* Light background for the text area */
+  border-radius: 10px; /* Rounded corners for the text area */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 300px; /* Aligns the width with the image */
+  margin: 20px auto; /* Centers the container */
+}
+
+.place-detail-info p {
+  font-size: 16px; /* Larger font size for readability */
+  color: #333; /* Darker text color for contrast */
+  line-height: 1.4; /* More space between lines of text */
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
+.place-detail-info p strong {
+  font-weight: bold; /* Emphasizes labels like 'Address:' */
+}
+
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ place.name }} - Urbaneer App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="phone-outline">
+  
+  <div class="status-bar">
+    <span>12:41</span>
+    <span>100% battery</span>
+  </div>
+
+  <header class="app-header">
+    <h1 class="app-title">{{ place.name }}</h1>
+    <img src="{{ url_for('static', filename='image/user_profile.jpeg') }}" alt="User" class="user-icon">
+  </header>
+
+  <div class="content">
+    <img src="{{ url_for('static', filename='image/' + place.image) }}" alt="{{ place.name }}" class="place-detail-image">
+    <div class="place-detail-info">
+      <p><strong>Address:</strong> {{ place.address }}</p>
+      <p><strong>Description:</strong> {{ place.description }}</p>
+      <!-- Additional place details here -->
+    </div>
+  </div>
+
+  <div class="navigation-bar">
+    <div>
+      <a href="/"><img src="{{ url_for('static', filename='image/home.jpeg') }}" alt="Home" class="icon"></a>
+      Home
+    </div>
+    <div><img src="{{ url_for('static', filename='image/plus.jpeg') }}" alt="Add" class="icon"></div>
+    <div><img src="{{ url_for('static', filename='image/user_profile.jpeg') }}" alt="Profile" class="icon">Profile</div>
+  </div>  
+
+</div>
+
+</body>
+</html>

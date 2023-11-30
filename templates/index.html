@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urbaneer App Prototype</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="phone-outline">
+  
+  <div class="status-bar">
+    <span>12:41</span>
+    <span>100% battery</span>
+  </div>
+
+  <header class="app-header">
+    <h1 class="app-title">Urbaneer</h1>
+    <img src="{{ url_for('static', filename='image/user_profile.jpeg') }}" alt="User" class="user-icon">
+  </header>
+
+  <nav class="global-nav">
+    <ul class="nav-list">
+      <li class="nav-item active">Restaurants</li>
+      <li class="nav-item">Bars</li>
+      <li class="nav-item">Groceries</li>
+      <li class="nav-item">Cleaning</li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div class="map-container">
+      <img src="{{ url_for('static', filename='image/fake_map_background.png') }}" alt="Map" class="map-image">
+    </div>
+    <ul id="places-list" class="places-container"></ul>
+  </div>
+
+  <div class="navigation-bar">
+    <div><img src="{{ url_for('static', filename='image/home.jpeg') }}" alt="Home" class="icon">Home</div>
+    <div><img src="{{ url_for('static', filename='image/plus.jpeg') }}" alt="Add" class="icon"></div>
+    <div><img src="{{ url_for('static', filename='image/user_profile.jpeg') }}" alt="Profile" class="icon">Profile</div>
+  </div>
+
+</div>
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
