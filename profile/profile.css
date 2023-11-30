@@ -1,0 +1,230 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: #f0f0f0;
+}
+
+/* Simulate the iPhone outline */
+.phone-outline {
+  width: 375px; /* iPhone width */
+  height: 812px; /* iPhone height */
+  margin: auto;
+  border-radius: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Status Bar */
+.status-bar {
+  width: 100%;
+  height: 45px; /* Increased height */
+  background: black; /* iOS status bar is typically black */
+  color: white;
+  font-size: 10px; /* Reduced font size */
+  line-height: 40px; /* Adjusted line height for vertical centering */
+  padding: 0 15px; /* Increased horizontal padding */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time {
+  font-size: 12px;
+}
+
+.status-icons {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.status-bar i {
+  margin-left: 5px;
+  color: white; /* White icons */
+}
+
+/* Profile Header */
+.profile-header {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-info .user-icon {
+  display: inline-block;
+  font-size: 50px; /* Adjust size as needed */
+  margin-bottom: 10px;
+}
+
+.profile-info h1 {
+  color: #c99f25; /* Yellow color for the title */
+  margin: 0;
+  font-size: 30px;
+}
+
+.user-details {
+  display: flex;
+  align-items: center; /* Aligns the icon with the text vertically */
+  gap: 10px; /* Spacing between the icon and the text */
+}
+
+.profile-info h2 {
+  color: #000; /* Name color */
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.profile-info .you-tag {
+  color: #555; /* Subdued color for 'You' tag */
+  font-size: 18px;
+}
+
+.profile-info p {
+  color: #666; /* Bio text color */
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Profile Navigation */
+.profile-nav {
+  background-color: #fff;
+  border-bottom: 2px solid #eee;
+  padding: 8px 0;
+}
+
+.profile-nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: 16px;
+}
+
+.profile-nav-item {
+  padding: 10px 15px;
+}
+
+.profile-nav-item.active {
+  position: relative; /* Position relative to allow absolute positioning of pseudo-elements */
+  padding: 10px px;
+}
+
+/* Content Area */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Bottom Navigation Bar */
+.navigation-bar {
+  height: 70px;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #d1d1d1;
+}
+
+.navigation-bar div {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* FontAwesome Icons */
+.fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+/* Content Area */
+/* Content Area */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+  grid-gap: 20px; /* Spacing between grid items */
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+.post {
+  position: relative;
+  width: 100%; /* Sets the width of the post to fill the column */
+  max-width: calc(50vw - 40px); /* Max width considering padding and gap */
+  overflow: hidden; /* Ensures the content doesn't spill out */
+  position: relative;
+}
+
+.post img {
+  width: 100%; /* Image takes the width of the container */
+  display: block;
+  border-radius: 10px;
+  object-fit: cover; /* This will cover the area, you may need to adjust the height accordingly */
+  height: 150px; /* Adjust the height to your preference */
+}
+
+.post-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 10px; /* Padding inside the post-info area */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-bottom-left-radius: 10px; /* Maintain the border radius of the image */
+  border-bottom-right-radius: 10px;
+}
+
+.like-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #ffffff; /* White color for the heart icon */
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Shadow to make the icon stand out */
+}
+
+.location-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px; /* Add padding as per your design */
+  background-color: #fff; /* Background color for the location info */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  margin-top: -10px; /* Adjust based on your design */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom-left-radius: 10px; /* Match the border radius with the image */
+  border-bottom-right-radius: 10px;
+}
+
+.location-info span,
+.location-info a {
+  display: block; /* This makes each span and the anchor tag take up a full row */
+}

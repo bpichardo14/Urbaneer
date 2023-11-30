@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urbaneer App Prototype</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="pre-profile.css">
+</head>
+<body>
+
+<div class="phone-outline">
+  
+  <div class="status-bar">
+    <span class="time">12:41</span>
+    <div class="status-icons">
+      <i class="fas fa-wifi"></i>
+      <i class="fas fa-battery-three-quarters"></i>
+    </div>
+  </div>
+
+  <header class="profile-header">
+    <div class="profile-info">
+      <h1>Urbaneer</h1>
+      <div class="user-details">
+        <span class="icon user-icon"><i class="fa fa-user"></i></span>
+        <div>
+          <h2>Katherine Doe <span class="you-tag">You</span></h2>
+          <p>From Brooklyn, NY<br>Studies Computer Science<br>Enjoys Greek Restaurants, Gift Shops, and Cafes</p>
+        </div>
+      </div>
+    </div>
+    <nav class="profile-nav">
+      <ul class="profile-nav-list">
+        <li class="profile-nav-item active">Posts</li>
+        <li class="profile-nav-item">Likes</li>
+        <li class="profile-nav-item">Saved</li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content">
+    <span>No posts yet</span>
+  </div>
+
+  <div class="navigation-bar">
+    <div><img src="{{ url_for('static', filename='image/home.jpeg') }}" alt="Home" class="icon">Home</div>
+    <div><img src="{{ url_for('static', filename='image/plus.jpeg') }}" alt="Add" class="icon"></div>
+    <div><img src="{{ url_for('static', filename='image/user_profile.jpeg') }}" alt="Profile" class="icon">Profile</div>
+  </div>
+
+</div>
+
+</body>
+</html>
