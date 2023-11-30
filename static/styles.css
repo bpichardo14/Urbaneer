@@ -86,6 +86,16 @@ body, html {
   transform: translateX(-50%); /* Center the element */
 }
 
+.nav-link {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Prevents color change on click */
+}
+
+.nav-link:hover, .nav-link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Main Content */
 .content {
   flex-grow: 1;
@@ -152,6 +162,16 @@ body, html {
 
 .navigation-bar img {
   margin-bottom: 4px; /* Space between icon and text */
+}
+
+/* In styles.css */
+.navigation-bar .nav-link a {
+  color: inherit; /* Makes the text color the same as the parent */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.navigation-bar .nav-link a:visited {
+  color: inherit; /* Keeps the color the same even after the link is visited */
 }
 
 /* You may need to adjust padding and margins for proper alignment */
@@ -253,6 +273,6 @@ body, html {
   font-weight: bold; /* Emphasizes labels like 'Address:' */
 }
 
-
-
-
+#current-time {
+  color: white;
+}

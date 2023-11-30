@@ -11,7 +11,7 @@
 <div class="phone-outline">
   
   <div class="status-bar">
-    <span>12:41</span>
+    <span id="current-time"></span>
     <span>100% battery</span>
   </div>
 
@@ -37,9 +37,17 @@
   </div>
 
   <div class="navigation-bar">
-    <div><img src="{{ url_for('static', filename='image/home.jpeg') }}" alt="Home" class="icon">Home</div>
+    <div>
+      <a href="{{ url_for('home') }}" class="nav-link">
+        <img src="{{ url_for('static', filename='image/home.jpeg') }}" alt="Home" class="icon">Home
+      </a>
+    </div>
     <div><img src="{{ url_for('static', filename='image/plus.jpeg') }}" alt="Add" class="icon"></div>
-    <div><img src="{{ url_for('static', filename='image/user_profile.jpeg') }}" alt="Profile" class="icon">Profile</div>
+    <div>
+      <a href="{{ url_for('profile') }}" class="nav-link">
+        <img src="{{ url_for('static', filename='image/user_profile.jpeg') }}" alt="Profile" class="icon">Profile
+      </a>
+    </div>
   </div>
 
 </div>
