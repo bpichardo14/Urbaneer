@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-API_KEY = "AIzaSyDRN4nkBauq2pSLMdDSFhx2z8QAsCRtU7M"
+API_KEY = "YOUR_API_KEY"
 BASE_URL =  "https://maps.googleapis.com/maps/api/place"
 
 @app.route('/GetCompanyByType', methods=['GET'])
