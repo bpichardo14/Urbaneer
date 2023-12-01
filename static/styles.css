@@ -1,8 +1,10 @@
 /* Global Styles */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   background: #f0f0f0;
 }
 
@@ -12,7 +14,7 @@ body, html {
   height: 812px; /* iPhone height */
   margin: auto;
   border-radius: 40px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   background: white;
   position: relative;
@@ -36,11 +38,26 @@ body, html {
   align-items: center;
 }
 
+.time {
+  font-size: 12px;
+}
+
+.status-icons {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.status-bar i {
+  margin-left: 5px;
+  color: white; /* White icons */
+}
+
 /* App Header */
 .app-header {
   background-color: #fff;
   text-align: center;
-  padding: 10px ;
+  padding: 10px;
 }
 
 .app-title {
@@ -75,7 +92,7 @@ body, html {
 }
 
 .nav-item.active::after {
-  content: '';
+  content: "";
   display: block;
   width: 15%; /* Adjust this value to control the length of the underline */
   height: 3px;
@@ -105,6 +122,28 @@ body, html {
   text-align: center;
 }
 
+/* Sample icons for navigation bar */
+.icon {
+  display: block;
+  margin: auto;
+  height: 20px;
+  width: 20px;
+  background: black;
+}
+
+/* Additional styles for icons and user icon */
+.icon,
+.user-icon {
+  height: 24px; /* Adjust as needed */
+  width: 24px; /* Adjust as needed */
+}
+
+.user-icon {
+  position: absolute;
+  top: 62px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+}
+
 /* Bottom Navigation Bar */
 .navigation-bar {
   height: 70px;
@@ -116,34 +155,10 @@ body, html {
   border-top: 1px solid #d1d1d1;
 }
 
+/* Update navigation bar to account for images */
 .navigation-bar div {
   flex-grow: 1;
   text-align: center;
-}
-
-/* Sample icons for navigation bar */
-.icon {
-  display: block;
-  margin: auto;
-  height: 20px;
-  width: 20px;
-  background: black;
-}
-
-/* Additional styles for icons and user icon */
-.icon, .user-icon {
-  height: 24px; /* Adjust as needed */
-  width: 24px; /* Adjust as needed */
-}
-
-.user-icon {
-  position: absolute;
-  top: 62px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
-}
-
-/* Update navigation bar to account for images */
-.navigation-bar div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -252,7 +267,3 @@ body, html {
 .place-detail-info p strong {
   font-weight: bold; /* Emphasizes labels like 'Address:' */
 }
-
-
-
-

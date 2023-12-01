@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Urbaneer App Prototype</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
@@ -11,8 +12,11 @@
 <div class="phone-outline">
   
   <div class="status-bar">
-    <span>12:41</span>
-    <span>100% battery</span>
+    <span class="time">12:41</span>
+    <div class="status-icons">
+    <i class="fas fa-wifi"></i>
+    <i class="fas fa-battery-three-quarters"></i>
+    </div>
   </div>
 
   <header class="app-header">
@@ -37,9 +41,9 @@
   </div>
 
   <div class="navigation-bar">
-    <div><img src="{{ url_for('static', filename='image/home.jpeg') }}" alt="Home" class="icon">Home</div>
-    <div><img src="{{ url_for('static', filename='image/plus.jpeg') }}" alt="Add" class="icon"></div>
-    <div><img src="{{ url_for('static', filename='image/user_profile.jpeg') }}" alt="Profile" class="icon">Profile</div>
+    <div><i class="icon fas fa-home"></i>Home</div>
+    <div><i class="icon fas fa-plus"></i>Add</div>
+    <div><i class="icon fas fa-user"></i>Profile</div>
   </div>
 
 </div>
