@@ -41,18 +41,9 @@
     </nav>
   </header>
 
-<div class="content">
-    {% for place in fake_places %}
-        <div class="place-card">
-            <img src="{{ url_for('static', filename='profile/' + place.image) }}" alt="{{ place.name }}" class="place-image">
-            <div class="place-info">
-                <h3>{{ place.name }}</h3>
-                <p>Distance: {{ place.distance }}</p>
-                <p>Review: {{ place.review }}</p>
-            </div>
-        </div>
-    {% endfor %}
-</div>
+  <div class="content">
+    <ul id="places-list" class="places-container"></ul>
+  </div>
 
 
   <div class="navigation-bar">

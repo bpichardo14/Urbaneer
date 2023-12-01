@@ -125,20 +125,12 @@ html {
 
 /* Content Area */
 .content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
-  grid-gap: 20px; /* Spacing between grid items */
-  padding: 20px;
+  flex-grow: 1;
+  overflow: auto;
 }
 
 .post {
   text-align: center; /* Centering content in the post */
-}
-
-.content img {
-  width: 15px; /* Set width to 18px */
-  height: 15px; /* Set height to 18px */
-  margin-bottom: 10px; /* Space between image and description */
 }
 
 .post-description {
@@ -149,6 +141,7 @@ html {
 /* Bottom Navigation Bar */
 .navigation-bar {
   height: 70px;
+  min-height: 71px;
   background: #f8f8f8;
   display: flex;
   justify-content: space-around;
@@ -176,31 +169,12 @@ html {
   color: inherit; /* Use the parent's text color */
 }
 
-/* Content Area */
-.content {
-  flex-grow: 1;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates two columns */
-  grid-gap: 20px; /* Spacing between grid items */
-  justify-items: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-}
-
 .post {
   position: relative;
   width: 100%; /* Sets the width of the post to fill the column */
   max-width: calc(50vw - 40px); /* Max width considering padding and gap */
   overflow: hidden; /* Ensures the content doesn't spill out */
   position: relative;
-}
-
-.post img {
-  width: 100%; /* Image takes the width of the container */
-  display: block;
-  border-radius: 10px;
-  object-fit: cover; /* This will cover the area, you may need to adjust the height accordingly */
-  height: 150px; /* Adjust the height to your preference */
 }
 
 .post-info {
@@ -249,4 +223,43 @@ html {
 
 #current-time {
   color: white;
+}
+
+.places-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px; /* Adjust to match the gap on the index page */
+  padding: 0;
+  list-style: none; /* Removes bullet points from the list */
+}
+
+.place-card {
+  background-color: #fff;
+  margin: 1px;
+  margin-bottom: 20px;
+  flex-basis: calc(50% - 20px); /* Adjust to match the width on the index page, considering the gap */
+  box-shadow: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px; /* Match border-radius with index.html */
+  /* Add any other styles from styles.css that are relevant */
+}
+
+.place-image {
+  width: 80%; /* Full width of the container */
+  height: 100px; /* Fixed height for all images */
+  object-fit: cover; /* This will cover the area, cropping the image if necessary */
+  border-radius: 10px; /* Match the border-radius with index.html if needed */
+  /* Keep the rest of your styles for .place-image */
+}
+
+.place-info h3,
+.place-info p {
+  margin: 5px 0; /* Keep the reduced vertical space */
+  font-size: 13px; /* Adjust font size as needed */
+  line-height: 0.9; /* Adjust line height for better readability */
+  text-align: center;
 }

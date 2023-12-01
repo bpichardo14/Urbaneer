@@ -153,6 +153,7 @@ html {
 /* Bottom Navigation Bar */
 .navigation-bar {
   height: 70px;
+  min-height: 70px;
   background: #f8f8f8;
   display: flex;
   justify-content: space-around;
