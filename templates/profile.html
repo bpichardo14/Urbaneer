@@ -41,7 +41,7 @@
     </nav>
   </header>
 
-  <div class="content">
+<div class="content">
     {% for place in fake_places %}
         <div class="place-card">
             <img src="{{ url_for('static', filename='profile/' + place.image) }}" alt="{{ place.name }}" class="place-image">
