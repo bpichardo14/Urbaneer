@@ -103,6 +103,12 @@ html {
   transform: translateX(-50%); /* Center the element */
 }
 
+.navigation-bar:hover,
+.navigation-bar:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Main Content */
 .content {
   flex-grow: 1;
@@ -147,7 +153,6 @@ html {
 /* Bottom Navigation Bar */
 .navigation-bar {
   height: 70px;
-  min-height: 70px;
   background: #f8f8f8;
   display: flex;
   justify-content: space-around;
@@ -155,18 +160,32 @@ html {
   border-top: 1px solid #d1d1d1;
 }
 
-/* Update navigation bar to account for images */
-.navigation-bar div {
-  flex-grow: 1;
-  text-align: center;
+.navigation-bar div,
+.navigation-bar a.nav-link {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Ensure text is centered */
+  flex-grow: 1;
+}
+
+.navigation-bar .fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-bottom: 4px; /* Space between icon and text */
+}
+
+.nav-link {
+  text-decoration: none; /* Remove default hyperlink styling */
+  color: inherit; /* Use the parent's text color */
 }
 
 .navigation-bar img {
   margin-bottom: 4px; /* Space between icon and text */
+}
+
+.navigation-bar .nav-link a:visited {
+  color: inherit; /* Keeps the color the same even after the link is visited */
 }
 
 /* You may need to adjust padding and margins for proper alignment */
@@ -266,4 +285,8 @@ html {
 
 .place-detail-info p strong {
   font-weight: bold; /* Emphasizes labels like 'Address:' */
+}
+
+#current-time {
+  color: white;
 }

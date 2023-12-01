@@ -26,13 +26,17 @@
   </header>
 
   <div class="content">
-    <img src="{{ url_for('static', filename='image/' + place.image) }}" alt="{{ place.name }}" class="place-detail-image">
-    <div class="place-detail-info">
-      <p><strong>Address:</strong> {{ place.address }}</p>
-      <p><strong>Description:</strong> {{ place.description }}</p>
-      <!-- Additional place details here -->
-    </div>
-  </div>
+    {% for place in places %}
+        <div class="place-card">
+            <img src="{{ url_for('static', filename='profile/' + place.image) }}" alt="{{ place.name }}">
+            <div class="place-info">
+                <h3>{{ place.name }}</h3>
+                <p>Distance: {{ place.distance }}</p>
+                <p>Review: {{ place.review }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
 
   <div class="navigation-bar">
     <div>

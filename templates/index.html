@@ -12,10 +12,11 @@
 <div class="phone-outline">
   
   <div class="status-bar">
-    <span class="time">12:41</span>
+  <span id="current-time"></span>    
     <div class="status-icons">
-    <i class="fas fa-wifi"></i>
-    <i class="fas fa-battery-three-quarters"></i>
+      <i class="fas fa-signal"></i>
+      <i class="fas fa-wifi"></i>
+      <i class="fas fa-battery-three-quarters"></i>
     </div>
   </div>
 
@@ -41,9 +42,21 @@
   </div>
 
   <div class="navigation-bar">
-    <div><i class="icon fas fa-home"></i>Home</div>
-    <div><i class="icon fas fa-plus"></i>Add</div>
-    <div><i class="icon fas fa-user"></i>Profile</div>
+    <div>
+      <a href="{{ url_for('home') }}" class="nav-link">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+    </div>
+    <div><i class="fas fa-plus"></i>
+      <span>Add</span>
+    </div>
+    <div>
+      <a href="{{ url_for('profile') }}" class="nav-link">
+        <i class="fas fa-user"></i>
+        <span>Profile</span>
+      </a>
+    </div>
   </div>
 
 </div>

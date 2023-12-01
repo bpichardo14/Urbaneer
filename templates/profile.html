@@ -12,8 +12,9 @@
 <div class="phone-outline">
   
   <div class="status-bar">
-    <span class="time">12:41</span>
+    <span id="current-time"></span>
     <div class="status-icons">
+      <i class="fas fa-signal"></i>
       <i class="fas fa-wifi"></i>
       <i class="fas fa-battery-three-quarters"></i>
     </div>
@@ -33,7 +34,7 @@
     </div>
     <nav class="profile-nav">
       <ul class="profile-nav-list">
-        <li class="profile-nav-item active">Posts</li>
+        <li class="profile-nav-item active">Friends</li>
         <li class="profile-nav-item">Likes</li>
         <li class="profile-nav-item">Saved</li>
       </ul>
@@ -41,32 +42,39 @@
   </header>
 
   <div class="content">
-    <div class="post">
-      <img src="https://static.spotapps.co/web/downtown--amityhallnyc--com/custom/uptown.jpg" alt="Post Image" />
-      <i class="fa fa-heart like-icon"></i>
-    </div>
-    <!-- Repeat the above block for the number of images you want to display -->
-    <div class="post">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg/1200px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg" alt="Post Image" />
-      <i class="fa fa-heart like-icon"></i>
-    </div>
-    <div class="post">
-      <img src="https://www.travelandleisure.com/thmb/91pb8LbDAUwUN_11wATYjx5oF8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/new-york-city-evening-NYCTG0221-52492d6ccab44f328a1c89f41ac02aea.jpg" alt="Post Image" />
-      <i class="fa fa-heart like-icon"></i>
-    </div>
-    <div class="post">
-      <img src="https://cdn.tiqets.com/wordpress/blog/wp-content/uploads/2017/08/03134557/24-hours-in-new-york-1.jpg" alt="Post Image" />
-      <i class="fa fa-heart like-icon"></i>
-    </div>
-  </div>
+    {% for place in fake_places %}
+        <div class="place-card">
+            <img src="{{ url_for('static', filename='profile/' + place.image) }}" alt="{{ place.name }}" class="place-image">
+            <div class="place-info">
+                <h3>{{ place.name }}</h3>
+                <p>Distance: {{ place.distance }}</p>
+                <p>Review: {{ place.review }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
 
   <div class="navigation-bar">
-    <div><i class="icon fas fa-home"></i>Home</div>
-    <div><i class="icon fas fa-plus"></i>Add</div>
-    <div><i class="icon fas fa-user"></i>Profile</div>
+    <div>
+      <a href="{{ url_for('home') }}" class="nav-link">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+    </div>
+    <div><i class="fas fa-plus"></i>
+      <span>Add</span>
+    </div>
+    <div>
+      <a href="{{ url_for('profile') }}" class="nav-link">
+        <i class="fas fa-user"></i>
+        <span>Profile</span>
+      </a>
+    </div>
   </div>
 
 </div>
 
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>

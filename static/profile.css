@@ -125,16 +125,25 @@ html {
 
 /* Content Area */
 .content {
-  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-gap: 20px; /* Spacing between grid items */
   padding: 20px;
-  text-align: center;
+}
+
+.post {
+  text-align: center; /* Centering content in the post */
 }
 
 .content img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-  border-radius: 10px; /* Rounded corners for images */
+  width: 15px; /* Set width to 18px */
+  height: 15px; /* Set height to 18px */
+  margin-bottom: 10px; /* Space between image and description */
+}
+
+.post-description {
+  /* Style for the description text */
+  text-align: center; /* Center-align the description */
 }
 
 /* Bottom Navigation Bar */
@@ -147,17 +156,26 @@ html {
   border-top: 1px solid #d1d1d1;
 }
 
-.navigation-bar div {
+.navigation-bar div,
+.navigation-bar a.nav-link {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Ensure text is centered */
   flex-grow: 1;
-  text-align: center;
 }
 
-/* FontAwesome Icons */
-.fas {
+.navigation-bar .fas {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+  margin-bottom: 4px; /* Space between icon and text */
 }
-/* Content Area */
+
+.nav-link {
+  text-decoration: none; /* Remove default hyperlink styling */
+  color: inherit; /* Use the parent's text color */
+}
+
 /* Content Area */
 .content {
   flex-grow: 1;
@@ -227,4 +245,8 @@ html {
 .location-info span,
 .location-info a {
   display: block; /* This makes each span and the anchor tag take up a full row */
+}
+
+#current-time {
+  color: white;
 }
