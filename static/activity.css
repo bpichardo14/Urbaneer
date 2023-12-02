@@ -1,4 +1,5 @@
-/* Reset some default styles */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -147,12 +148,20 @@ html {
 
 /* Content Area */
 .content {
-  flex-grow: 1;
-  overflow: auto;
+  max-height: calc(
+    100vh - 120px
+  ); /* Adjust height considering header and navigation bar */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .post {
   text-align: center;
+}
+
+.content img {
+  width: 15px; /* Set width to 18px */
+  height: 15px; /* Set height to 18px */
+  margin-bottom: 10px; /* Space between image and description */
 }
 
 .post-description {
@@ -163,7 +172,6 @@ html {
 /* Bottom Navigation Bar */
 .navigation-bar {
   height: 70px;
-  min-height: 71px;
   background: #f8f8f8;
   display: flex;
   justify-content: space-around;
@@ -191,12 +199,30 @@ html {
   color: inherit; /* Use the parent's text color */
 }
 
+/* Content Area */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+  grid-gap: 20px; /* Spacing between grid items */
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
 .post {
   position: relative;
   width: 100%; /* Sets the width of the post to fill the column */
   max-width: calc(50vw - 40px); /* Max width considering padding and gap */
   overflow: hidden; /* Ensures the content doesn't spill out */
   position: relative;
+}
+
+.post img {
+  width: 100%; /* Image takes the width of the container */
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 150px;
 }
 
 .post-info {
@@ -247,118 +273,6 @@ html {
   color: white;
 }
 
-.places-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px; /* Adjust to match the gap on the index page */
-  padding: 0;
-  list-style: none; /* Removes bullet points from the list */
-}
-
-.place-card {
-  background-color: #fff;
-  margin: 1px;
-  margin-bottom: 20px;
-  flex-basis: calc(50% - 20px); /* Adjust to match the width on the index page, considering the gap */
-  box-shadow: none;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 10px; /* Match border-radius with index.html */
-  /* Add any other styles from styles.css that are relevant */
-}
-
-.place-image {
-  width: 80%; /* Full width of the container */
-  height: 100px; /* Fixed height for all images */
-  object-fit: cover; /* This will cover the area, cropping the image if necessary */
-  border-radius: 10px; /* Match the border-radius with index.html if needed */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-  /* Keep the rest of your styles for .place-image */
-}
-
-.place-image:hover {
-  transform: scale(1.05); /* Slightly enlarge image on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-}
-
-.place-info h3,
-.place-info p {
-  margin: 5px 0; /* Keep the reduced vertical space */
-  font-size: 13px; /* Adjust font size as needed */
-  line-height: 0.9; /* Adjust line height for better readability */
-  text-align: center;
-}
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 2; /* Above other content */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full viewport width */
-  height: 100%; /* Full viewport height */
-  background-color: rgba(0,0,0,0.6); /* Dark overlay */
-  overflow: auto; /* Enable scrolling if needed */
-  box-sizing: border-box;
-}
-
-.modal-content {
-  position: absolute; /* Position relative to the first positioned ancestor */
-  top: 50%; /* Move down by half of the parent's height */
-  left: 50%; /* Move right by half of the parent's width */
-  transform: translate(-50%, -50%); /* Shift back to truly center */
-  background-color: #fefefe;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 80%; /* Adjust based on your design */
-  max-width: 300px; /* Max width to ensure it fits in the phone outline */
-  /* Other styles... */
-}
-
-
-
-.close-button {
-  position: absolute;
-  top: 1px;
-  right: 3px;
-  color: #aaa;
-  font-size: 22px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close-button:hover,
-.close-button:focus {
-  color: black;
-  text-decoration: none;
-}
-
-/* Style the form elements inside the modal */
-#addPlaceForm input, #addPlaceForm textarea {
-  width: 100%; /* Full width */
-  padding: 10px;
-  margin: 5px 0 15px 0;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-}
-
-#addPlaceForm button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4CAF50; /* A green color */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#addPlaceForm button:hover {
-  background-color: #45a049;
 .friend-card {
   margin: 10px;
   padding: 10px;
@@ -366,27 +280,48 @@ html {
   border-radius: 5px;
   text-align: center;
 }
-}
 
-.friends-list {
-  max-height: 80vh; /* Adjust as needed for viewport height */
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding: 0;
+.activity-list {
+  width: 100%;
   margin: 0;
-  list-style: none; /* Remove bullet points */
+  padding: 0;
+  list-style: none;
+  overflow-y: auto;
+  max-height: calc(100vh - 160px);
 }
 
-.friend-item {
-  padding: 15px; /* Add some padding for spacing */
-  border-bottom: 1px solid #ccc; /* Optional: add a border to each item */
+.activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Odd items background */
-.friend-item:nth-child(odd) {
-  background-color: #f0f0f0; /* Light color for odd items */
+.activity-avatar {
+  width: 60px; /* Adjust as needed */
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
 }
 
-/* Even items background */
-.friend-item:nth-child(even) {
-  background-color: #fff; /* White or different color for even items */
+.activity-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-details h3 {
+  margin: 0;
+  font-size: 18px; /* Adjust as needed */
+}
+
+.activity-details p {
+  margin: 5px 0 0;
+  font-size: 14px; /* Adjust as needed */
+  color: #666;
 }

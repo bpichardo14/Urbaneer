@@ -189,8 +189,6 @@ html {
   color: inherit; /* Keeps the color the same even after the link is visited */
 }
 
-/* You may need to adjust padding and margins for proper alignment */
-
 .map-container {
   position: relative;
   width: calc(100% - 30px); /* Full width minus margin */

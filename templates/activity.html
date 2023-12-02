@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ place.name }} - Urbaneer App</title>
+  <title>Urbaneer App Prototype</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='activity.css') }}">
 </head>
 <body>
 
@@ -20,23 +20,22 @@
     </div>
   </div>
 
-  <header class="app-header">
-    <h1 class="app-title">{{ place.name }}</h1>
-    <img src="{{ url_for('static', filename='image/user_profile.jpeg') }}" alt="User" class="user-icon">
+  <header class="profile-header">
+    <div class="profile-info">
+      <h1>Urbaneer</h1>
+      <h2>Activity</h2>
   </header>
 
-  <div class="content">
-    {% for place in places %}
-        <div class="place-card">
-            <img src="{{ url_for('static', filename='profile/' + place.image) }}" alt="{{ place.name }}">
-            <div class="place-info">
-                <h3>{{ place.name }}</h3>
-                <p>Distance: {{ place.distance }}</p>
-                <p>Review: {{ place.review }}</p>
+  <ul class="activity-list">
+    {% for activity in activities %}
+        <li class="activity-item">
+            <div class="activity-details">
+                <h3>{{ activity.name }}</h3>
+                <p>{{ activity.activity }}</p>
             </div>
-        </div>
+        </li>
     {% endfor %}
-</div>
+</ul>
 
   <div class="navigation-bar">
     <div>
@@ -45,8 +44,7 @@
         <span>Home</span>
       </a>
     </div>
-    <div><i class="fas fa-plus"></i>
-    </div>
+    <div><i class="fas fa-plus"></i></div>
     <div>
       <a href="{{ url_for('profile') }}" class="nav-link">
         <i class="fas fa-user"></i>
@@ -56,6 +54,7 @@
   </div>
 
 </div>
+
 <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>
