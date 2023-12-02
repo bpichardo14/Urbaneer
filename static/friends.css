@@ -1,4 +1,3 @@
-/* Reset some default styles */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
 * {
@@ -14,10 +13,9 @@ html {
   background: #f0f0f0;
 }
 
-/* Simulate the iPhone outline */
 .phone-outline {
-  width: 375px; /* iPhone width */
-  height: 812px; /* iPhone height */
+  width: 375px; 
+  height: 812px; 
   margin: auto;
   border-radius: 40px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -28,15 +26,14 @@ html {
   flex-direction: column;
 }
 
-/* Top Status Bar */
 .status-bar {
   width: 100%;
-  height: 45px; /* Increased height */
-  background: black; /* iOS status bar is typically black */
+  height: 45px; 
+  background: black; 
   color: white;
-  font-size: 10px; /* Reduced font size */
-  line-height: 40px; /* Adjusted line height for vertical centering */
-  padding: 0 15px; /* Increased horizontal padding */
+  font-size: 10px; 
+  line-height: 40px; 
+  padding: 0 15px; 
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -55,54 +52,52 @@ html {
 
 .status-bar i {
   margin-left: 5px;
-  color: white; /* White icons */
+  color: white;
 }
 
-/* Profile Header */
 .profile-header {
   background-color: #fff;
   padding: 20px;
   text-align: center;
-  margin-bottom: 0; /* Reduce or remove bottom margin */
-  padding-bottom: 10px; /* You can adjust this as needed */
+  margin-bottom: 0; 
+  padding-bottom: 10px; 
 }
 
 .profile-info .user-icon {
   display: inline-block;
-  font-size: 50px; /* Adjust size as needed */
+  font-size: 50px; 
   margin-bottom: 10px;
 }
 
 .profile-info h1 {
-  color: #c99f25; /* Yellow color for the title */
+  color: #c99f25; 
   margin: 0;
   font-size: 30px;
 }
 
 .user-details {
   display: flex;
-  align-items: center; /* Aligns the icon with the text vertically */
-  gap: 10px; /* Spacing between the icon and the text */
+  align-items: center; 
+  gap: 10px; 
 }
 
 .profile-info h2 {
-  color: #000; /* Name color */
+  color: #000; 
   margin-bottom: 5px;
   font-size: 24px;
 }
 
 .profile-info .you-tag {
-  color: #555; /* Subdued color for 'You' tag */
+  color: #555;
   font-size: 18px;
 }
 
 .profile-info p {
-  color: #666; /* Bio text color */
+  color: #666; 
   font-size: 16px;
   margin-top: 5px;
 }
 
-/* Profile Navigation */
 .profile-nav {
   background-color: #fff;
   border-bottom: 2px solid #eee;
@@ -120,50 +115,50 @@ html {
 
 .profile-nav-item {
   padding: 10px 15px;
-  color: inherit; /* Keeps the link the same color as surrounding text */
-  text-decoration: none; /* Removes underline */
+  color: inherit; 
+  text-decoration: none; 
 }
 
 .profile-nav-item.active {
-  font-weight: bold; /* Makes the text bold */
-  position: relative; /* Position relative to allow absolute positioning of pseudo-elements */
+  font-weight: bold; 
+  position: relative; 
   padding: 10px px;
 }
 
 .profile-nav-item.active::after {
   content: "";
   display: block;
-  width: 25%; /* Adjust this value to control the length of the underline */
+  width: 25%; 
   height: 3px;
-  background-color: black; /* The color of the underline */
+  background-color: black; 
   position: absolute;
-  bottom: 3px; /* Adjust this value to move the line closer to the text */
-  left: 50%; /* Start from the middle */
-  transform: translateX(-50%); /* Center the element */
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%); 
 }
 
 .profile-nav-item a,
 .profile-nav-item a:visited,
 .profile-nav-item a:hover,
 .profile-nav-item a:active {
-  color: inherit; /* This will ensure the color doesn't change */
-  text-decoration: none; /* This will ensure no underline appears */
+  color: inherit; 
+  text-decoration: none; 
 }
 
 /* Content Area */
 .content {
   max-height: calc(
     100vh - 120px
-  ); /* Adjust height considering header and navigation bar */
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding-top: 10px; /* Reduce top padding */
-  margin-top: 0; /* Reduce or remove top margin */
+  ); 
+  overflow-y: auto; 
+  padding-top: 10px; 
+  margin-top: 0; 
   flex-grow: 1;
   padding: 20px;
-  grid-template-columns: repeat(2, 1fr); /* Creates two columns */
-  grid-gap: 20px; /* Spacing between grid items */
-  justify-items: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 20px; 
+  justify-items: center; 
+  align-items: center;
 }
 
 .post {
@@ -171,14 +166,13 @@ html {
 }
 
 .content img {
-  width: 15px; /* Set width to 18px */
-  height: 15px; /* Set height to 18px */
-  margin-bottom: 10px; /* Space between image and description */
+  width: 15px;
+  height: 15px;
+  margin-bottom: 10px;
 }
 
 .post-description {
-  /* Style for the description text */
-  text-align: center; /* Center-align the description */
+  text-align: center;
 }
 
 /* Bottom Navigation Bar */
@@ -195,33 +189,33 @@ html {
 .navigation-bar div,
 .navigation-bar a.nav-link {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  text-align: center; /* Ensure text is centered */
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
   flex-grow: 1;
 }
 
 .navigation-bar .fas {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  margin-bottom: 4px; /* Space between icon and text */
+  margin-bottom: 4px; 
 }
 
 .nav-link {
-  text-decoration: none; /* Remove default hyperlink styling */
-  color: inherit; /* Use the parent's text color */
+  text-decoration: none; 
+  color: inherit;
 }
 
 .post {
   position: relative;
-  width: 100%; /* Sets the width of the post to fill the column */
-  max-width: calc(50vw - 40px); /* Max width considering padding and gap */
-  overflow: hidden; /* Ensures the content doesn't spill out */
+  width: 100%;
+  max-width: calc(50vw - 40px);
+  overflow: hidden;
   position: relative;
 }
 
 .post img {
-  width: 100%; /* Image takes the width of the container */
+  width: 100%; 
   display: block;
   border-radius: 10px;
   object-fit: cover;
@@ -233,12 +227,12 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0 10px; /* Padding inside the post-info area */
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align text to the left */
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-  border-bottom-left-radius: 10px; /* Maintain the border radius of the image */
+  align-items: flex-start; 
+  background: rgba(255, 255, 255, 0.8); 
+  border-bottom-left-radius: 10px; 
   border-bottom-right-radius: 10px;
 }
 
@@ -247,29 +241,29 @@ html {
   top: 10px;
   right: 10px;
   font-size: 24px;
-  color: #ffffff; /* White color for the heart icon */
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Shadow to make the icon stand out */
+  color: #ffffff; 
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 .location-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px; /* Add padding as per your design */
-  background-color: #fff; /* Background color for the location info */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
-  margin-top: -10px; /* Adjust based on your design */
+  padding: 5px 10px; 
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin-top: -10px;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  border-bottom-left-radius: 10px; /* Match the border radius with the image */
+  border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 .location-info span,
 .location-info a {
-  display: block; /* This makes each span and the anchor tag take up a full row */
+  display: block;
 }
 
 #current-time {
@@ -296,7 +290,7 @@ html {
 .friend-item {
   display: flex;
   align-items: center;
-  padding: 0; /* Reduced top and bottom padding */
+  padding: 0; 
   margin: 10px 0;
   border-radius: 10px;
   background-color: #f9f9f9;
@@ -322,13 +316,13 @@ html {
 
 .friend-details h3 {
   margin: 0;
-  font-size: 20px; /* Adjust as needed */
+  font-size: 20px;
 }
 
 .friend-details p {
   margin: 5px 0 0;
-  font-size: 16px; /* Adjust as needed */
-  color: #666; /* Subdued text color for info */
+  font-size: 16px; 
+  color: #666; 
 }
 
 /* Adjust odd/even styles as needed */
@@ -341,30 +335,29 @@ html {
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 2; /* Above other content */
+  display: none;
+  position: fixed; 
+  z-index: 2; 
   left: 0;
   top: 0;
-  width: 100%; /* Full viewport width */
-  height: 100%; /* Full viewport height */
-  background-color: rgba(0,0,0,0.6); /* Dark overlay */
-  overflow: auto; /* Enable scrolling if needed */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  overflow: auto;
   box-sizing: border-box;
 }
 
 .modal-content {
-  position: absolute; /* Position relative to the first positioned ancestor */
-  top: 35%; /* Move down by half of the parent's height */
-  left: 50%; /* Move right by half of the parent's width */
-  transform: translate(-50%, -50%); /* Shift back to truly center */
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #fefefe;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 80%; /* Adjust based on your design */
-  max-width: 300px; /* Max width to ensure it fits in the phone outline */
-  /* Other styles... */
+  width: 80%;
+  max-width: 300px;
 }
 
 .close-button {
@@ -385,7 +378,7 @@ html {
 
 /* Style the form elements inside the modal */
 #addPlaceForm input, #addPlaceForm textarea {
-  width: 100%; /* Full width */
+  width: 100%;
   padding: 10px;
   margin: 5px 0 15px 0;
   border-radius: 5px;
@@ -396,7 +389,7 @@ html {
 #addPlaceForm button {
   width: 100%;
   padding: 10px;
-  background-color: #4CAF50; /* A green color */
+  background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 5px;
