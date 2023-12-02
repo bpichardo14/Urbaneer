@@ -145,6 +145,14 @@ html {
   text-decoration: none; /* Ensures no underline appears */
 }
 
+.profile-nav-item a,
+.profile-nav-item a:visited,
+.profile-nav-item a:hover,
+.profile-nav-item a:active {
+  color: inherit; /* This will ensure the color doesn't change */
+  text-decoration: none; /* This will ensure no underline appears */
+}
+
 /* Content Area */
 .content {
   flex-grow: 1;
@@ -307,7 +315,7 @@ html {
 
 .modal-content {
   position: absolute; /* Position relative to the first positioned ancestor */
-  top: 50%; /* Move down by half of the parent's height */
+  top: 35%; /* Move down by half of the parent's height */
   left: 50%; /* Move right by half of the parent's width */
   transform: translate(-50%, -50%); /* Shift back to truly center */
   background-color: #fefefe;
@@ -359,13 +367,14 @@ html {
 
 #addPlaceForm button:hover {
   background-color: #45a049;
+}
+
 .friend-card {
   margin: 10px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: center;
-}
 }
 
 .friends-list {

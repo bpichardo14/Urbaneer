@@ -59,17 +59,25 @@
     </ul>
 </div>
 
-
-
-
-  <div class="navigation-bar">
-    <div>
-      <a href="{{ url_for('home') }}" class="nav-link">
-        <i class="fas fa-home"></i>
-        <span>Home</span>
-      </a>
+<div class="navigation-bar">
+  <div>
+    <a href="{{ url_for('home') }}" class="nav-link">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+  </div>
+  <i class="fas fa-plus" id="addPlaceButton"></i>
+  <div id="addPlaceModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <form id="addPlaceForm">
+        <input type="text" id="placeName" name="placeName" placeholder="Place Name" required>
+        <textarea id="placeDescription" name="placeDescription" placeholder="Personal Description" required></textarea>
+        <!-- Add other fields as necessary -->
+        <button type="submit">Submit</button>
+      </form>
     </div>
-    <div><i class="fas fa-plus"></i></div>
+  </div>
     <div>
       <a href="{{ url_for('profile') }}" class="nav-link">
         <i class="fas fa-user"></i>

@@ -305,7 +305,7 @@ html {
 
 .modal-content {
   position: absolute; /* Position relative to the first positioned ancestor */
-  top: 50%; /* Move down by half of the parent's height */
+  top: 35%; /* Move down by half of the parent's height */
   left: 50%; /* Move right by half of the parent's width */
   transform: translate(-50%, -50%); /* Shift back to truly center */
   background-color: #fefefe;
@@ -316,8 +316,6 @@ html {
   max-width: 300px; /* Max width to ensure it fits in the phone outline */
   /* Other styles... */
 }
-
-
 
 .close-button {
   position: absolute;

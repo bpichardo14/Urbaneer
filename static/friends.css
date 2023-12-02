@@ -142,11 +142,12 @@ html {
   transform: translateX(-50%); /* Center the element */
 }
 
-.profile-nav-item a:hover,
+.profile-nav-item a,
 .profile-nav-item a:visited,
+.profile-nav-item a:hover,
 .profile-nav-item a:active {
-  color: inherit; /* Prevents color change on hover, visited, or active */
-  text-decoration: none; /* Ensures no underline appears */
+  color: inherit; /* This will ensure the color doesn't change */
+  text-decoration: none; /* This will ensure no underline appears */
 }
 
 /* Content Area */
@@ -182,6 +183,7 @@ html {
 
 /* Bottom Navigation Bar */
 .navigation-bar {
+  min-height: 71px;
   height: 70px;
   background: #f8f8f8;
   display: flex;
@@ -336,4 +338,67 @@ html {
 
 .friend-item:nth-child(even) {
   background-color: #f9f9f9;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Above other content */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full viewport width */
+  height: 100%; /* Full viewport height */
+  background-color: rgba(0,0,0,0.6); /* Dark overlay */
+  overflow: auto; /* Enable scrolling if needed */
+  box-sizing: border-box;
+}
+
+.modal-content {
+  position: absolute; /* Position relative to the first positioned ancestor */
+  top: 35%; /* Move down by half of the parent's height */
+  left: 50%; /* Move right by half of the parent's width */
+  transform: translate(-50%, -50%); /* Shift back to truly center */
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%; /* Adjust based on your design */
+  max-width: 300px; /* Max width to ensure it fits in the phone outline */
+  /* Other styles... */
+}
+
+.close-button {
+  position: absolute;
+  top: 1px;
+  right: 3px;
+  color: #aaa;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Style the form elements inside the modal */
+#addPlaceForm input, #addPlaceForm textarea {
+  width: 100%; /* Full width */
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+#addPlaceForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50; /* A green color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
