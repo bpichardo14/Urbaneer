@@ -1,12 +1,10 @@
-# fake_data.py
 fake_places = [
-    # Existing places...
     {
         'name': 'Amity Hall',
         'location': {'lat': 40.730610, 'lng': -73.935242},
         'address': '80 3rd Ave, New York, NY 10003',
         'description': 'A great place to enjoy craft beers and classic American pub fare.',
-        'image': 'Amity_Hall.jpeg',  # Replace with your actual image filename
+        'image': 'Amity_Hall.jpeg', 
         'likes': 134,
         'distance': '5 min away'
     },
@@ -15,7 +13,7 @@ fake_places = [
         'location': {'lat': 40.712776, 'lng': -74.005974},
         'address': '2867 Broadway, New York, NY 10025',
         'description': 'A rooftop bar offering stunning city views & a modern take on Mexican cuisine.',
-        'image': 'The_Heights.png',  # Replace with your actual image filename
+        'image': 'The_Heights.png',  
         'likes': 89,
         'distance': '7 min away'
     },
@@ -24,7 +22,7 @@ fake_places = [
         'location': {'lat': 40.802776, 'lng': -73.967772},
         'address': '2848 Broadway, New York, NY 10025',
         'description': 'Famous for giant-sized slices of pizza.',
-        'image': 'Koronet_Pizza.jpeg',  # Replace with your actual image filename
+        'image': 'Koronet_Pizza.jpeg',  
         'likes': 102,
         'distance': '2 min away'
     },
@@ -37,7 +35,6 @@ fake_places = [
         'likes': 58,
         'distance': '6 min away'
     }
-    # ... any other places you want to add ...
 ]
 
 friends_places = [

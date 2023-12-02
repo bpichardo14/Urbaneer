@@ -8,7 +8,6 @@ app = Flask(__name__)
 
 @app.route('/api/places')
 def get_places():
-    """Endpoint to return list of places in JSON format."""
     return jsonify(fake_places)
 
 @app.route('/')
@@ -39,8 +38,6 @@ def show_place(name):
 def add_place():
     place_name = request.form.get('placeName')
     place_description = request.form.get('placeDescription')
-    # Handle the data, save it to your database or file system as required
-    # Redirect or send back a response
     return jsonify({'status': 'success', 'message': 'Place added!'})
 
 if __name__ == '__main__':
