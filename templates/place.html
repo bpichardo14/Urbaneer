@@ -22,7 +22,12 @@
 
   <header class="app-header">
     <h1 class="app-title">{{ place.name }}</h1>
-    <img src="{{ url_for('static', filename='image/user_profile.jpeg') }}" alt="User" class="user-icon">
+    <div class="user-icon">
+      <a href="{{ url_for('activity') }}" class="nav-link">
+        <i class="fas fa-running fa-2x"></i>
+        <span class="activity-text">Activity</span>
+      </a>
+    </div>  
   </header>
 
   <div class="content">
@@ -47,7 +52,6 @@
         <form id="addPlaceForm">
           <input type="text" id="placeName" name="placeName" placeholder="Place Name" required>
           <textarea id="placeDescription" name="placeDescription" placeholder="Personal Description" required></textarea>
-          <!-- Add other fields as necessary -->
           <button type="submit">Submit</button>
         </form>
       </div>
