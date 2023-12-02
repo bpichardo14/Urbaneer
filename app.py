@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from fake_data import fake_places
 
 app = Flask(__name__)
@@ -23,6 +23,14 @@ def show_place(name):
         return render_template('place.html', place=place)
     else:
         return "Place not found", 404
+    
+@app.route('/add_place', methods=['POST'])
+def add_place():
+    place_name = request.form.get('placeName')
+    place_description = request.form.get('placeDescription')
+    # Handle the data, save it to your database or file system as required
+    # Redirect or send back a response
+    return jsonify({'status': 'success', 'message': 'Place added!'})
 
 if __name__ == '__main__':
     app.run(debug=True)

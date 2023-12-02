@@ -50,3 +50,62 @@ window.onload = function() {
   setInterval(updateTime, 60000);
   updateTime();
 };
+
+// Place this code inside the `DOMContentLoaded` event listener
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Existing code...
+
+  // Get the modal
+  var modal = document.getElementById("addPlaceModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("addPlaceButton");
+
+  // Get the <span> element that closes the modal
+  var closeBtn = document.getElementsByClassName("close-button")[0];
+
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  };
+
+  // When the user clicks on <span> (x), close the modal
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  // Handle the form submission
+  var form = document.getElementById("addPlaceForm");
+  form.onsubmit = function(event) {
+    event.preventDefault();
+    // AJAX call to server with form data
+    // For example, using fetch API:
+    var placeName = document.getElementById("placeName").value;
+    var placeDescription = document.getElementById("placeDescription").value;
+    
+    fetch('/add_place', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `placeName=${placeName}&placeDescription=${placeDescription}`
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      // Close the modal
+      modal.style.display = "none";
+      // Optionally, add the new place to the places list without reloading the page
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  };
+});

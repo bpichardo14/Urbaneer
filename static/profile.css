@@ -253,7 +253,13 @@ html {
   height: 100px; /* Fixed height for all images */
   object-fit: cover; /* This will cover the area, cropping the image if necessary */
   border-radius: 10px; /* Match the border-radius with index.html if needed */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
   /* Keep the rest of your styles for .place-image */
+}
+
+.place-image:hover {
+  transform: scale(1.05); /* Slightly enlarge image on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
 .place-info h3,
@@ -262,4 +268,73 @@ html {
   font-size: 13px; /* Adjust font size as needed */
   line-height: 0.9; /* Adjust line height for better readability */
   text-align: center;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Above other content */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full viewport width */
+  height: 100%; /* Full viewport height */
+  background-color: rgba(0,0,0,0.6); /* Dark overlay */
+  overflow: auto; /* Enable scrolling if needed */
+  box-sizing: border-box;
+}
+
+.modal-content {
+  position: absolute; /* Position relative to the first positioned ancestor */
+  top: 50%; /* Move down by half of the parent's height */
+  left: 50%; /* Move right by half of the parent's width */
+  transform: translate(-50%, -50%); /* Shift back to truly center */
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%; /* Adjust based on your design */
+  max-width: 300px; /* Max width to ensure it fits in the phone outline */
+  /* Other styles... */
+}
+
+
+
+.close-button {
+  position: absolute;
+  top: 1px;
+  right: 3px;
+  color: #aaa;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Style the form elements inside the modal */
+#addPlaceForm input, #addPlaceForm textarea {
+  width: 100%; /* Full width */
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+#addPlaceForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50; /* A green color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addPlaceForm button:hover {
+  background-color: #45a049;
 }

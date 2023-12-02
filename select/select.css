@@ -1,0 +1,264 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: #f0f0f0;
+}
+
+/* Simulate the iPhone outline */
+.phone-outline {
+  width: 375px; /* iPhone width */
+  height: 812px; /* iPhone height */
+  margin: auto;
+  border-radius: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Status Bar */
+.status-bar {
+  width: 100%;
+  height: 45px; /* Increased height */
+  background: black; /* iOS status bar is typically black */
+  color: white;
+  font-size: 10px; /* Reduced font size */
+  line-height: 40px; /* Adjusted line height for vertical centering */
+  padding: 0 15px; /* Increased horizontal padding */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time {
+  font-size: 12px;
+}
+
+.status-icons {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.status-bar i {
+  margin-left: 5px;
+  color: white; /* White icons */
+}
+
+/* Profile Header */
+.profile-header {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-info .user-icon {
+  display: inline-block;
+  font-size: 50px; /* Adjust size as needed */
+  margin-bottom: 10px;
+}
+
+.profile-info h1 {
+  color: #c99f25; /* Yellow color for the title */
+  margin: 0;
+  font-size: 30px;
+}
+
+.user-details {
+  display: flex;
+  align-items: center; /* Aligns the icon with the text vertically */
+  gap: 10px; /* Spacing between the icon and the text */
+}
+
+.profile-info h2 {
+  color: #000; /* Name color */
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.profile-info .you-tag {
+  color: #555; /* Subdued color for 'You' tag */
+  font-size: 18px;
+}
+
+.profile-info p {
+  color: #666; /* Bio text color */
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Profile Navigation */
+.profile-nav {
+  background-color: #fff;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.profile-nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-nav-item {
+  padding: 10px 15px;
+}
+
+.profile-nav-item.active {
+  position: relative; /* Position relative to allow absolute positioning of pseudo-elements */
+  padding: 10px px;
+}
+
+.profile-nav-item.active::after {
+  content: "";
+  display: block;
+  width: 15%; /* Adjust this value to control the length of the underline */
+  height: 3px;
+  background-color: black; /* The color of the underline */
+  position: absolute;
+  bottom: 3px; /* Adjust this value to move the line closer to the text */
+  left: 50%; /* Start from the middle */
+  transform: translateX(-50%); /* Center the element */
+}
+/* Content Area */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+.navigation-bar {
+  height: 70px;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #d1d1d1;
+}
+
+.navigation-bar div {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* FontAwesome Icons */
+.fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+/* Content Area */
+/* Content Area */
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  padding: 20px;
+  text-align: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 16%;
+  height: 35%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Align children vertically */
+  justify-content: stretch; /* Stretch children to fill the container */
+}
+
+.modal-content button {
+  flex-grow: 1; /* Each button will grow equally */
+  margin: 0; /* Remove margins to connect the buttons */
+  background-color: #f0f0f0; /* Example background color */
+  border: none;
+  border-bottom: 1px solid #888; /* Border between buttons */
+  color: black; /* Text color */
+  padding: 10px 20px;
+  text-align: left; /* Align text to the left */
+  display: flex;
+  align-items: center;
+}
+
+.modal-header {
+  text-align: center; /* Aligns the header content to the center */
+  padding-bottom: 10px; /* Space between header and buttons */
+}
+
+.modal-header h2 {
+  margin: 0; /* Remove default margin */
+  /* Add any additional styling for the title here */
+}
+
+.modal-header .close {
+  position: absolute;
+  right: 20px; /* Adjust as necessary */
+  top: 10px; /* Adjust as necessary */
+  /* Additional styling for the close button */
+}
+
+.modal-content button i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.modal-content button:last-child {
+  border-bottom: none; /* Remove border from the last button */
+}
+
+.modal-content button i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.new-post {
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+}
