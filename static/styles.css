@@ -342,7 +342,7 @@ html {
 #addPlaceForm button {
   width: 100%;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: #c99f25;
   color: white;
   border: none;
   border-radius: 5px;
@@ -350,7 +350,7 @@ html {
 }
 
 #addPlaceForm button:hover {
-  background-color: #45a049;
+  background-color: #c99f25;
 }
 
 .activity-text {
