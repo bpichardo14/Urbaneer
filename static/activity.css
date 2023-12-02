@@ -1,4 +1,5 @@
-/* Reset some default styles */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -147,10 +148,10 @@ html {
 
 /* Content Area */
 .content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-  padding: 20px;
+  max-height: calc(
+    100vh - 120px
+  ); /* Adjust height considering header and navigation bar */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .post {
@@ -202,7 +203,6 @@ html {
 .content {
   flex-grow: 1;
   padding: 20px;
-  display: grid;
   grid-template-columns: repeat(2, 1fr); /* Creates two columns */
   grid-gap: 20px; /* Spacing between grid items */
   justify-items: center; /* Center items horizontally */
@@ -281,25 +281,47 @@ html {
   text-align: center;
 }
 
-.friends-list {
-  max-height: 80vh; /* Adjust as needed for viewport height */
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding: 0;
+.activity-list {
+  width: 100%;
   margin: 0;
-  list-style: none; /* Remove bullet points */
+  padding: 0;
+  list-style: none;
+  overflow-y: auto;
+  max-height: calc(100vh - 160px);
 }
 
-.friend-item {
-  padding: 15px; /* Add some padding for spacing */
-  border-bottom: 1px solid #ccc; /* Optional: add a border to each item */
+.activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Odd items background */
-.friend-item:nth-child(odd) {
-  background-color: #f0f0f0; /* Light color for odd items */
+.activity-avatar {
+  width: 60px; /* Adjust as needed */
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
 }
 
-/* Even items background */
-.friend-item:nth-child(even) {
-  background-color: #fff; /* White or different color for even items */
+.activity-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-details h3 {
+  margin: 0;
+  font-size: 18px; /* Adjust as needed */
+}
+
+.activity-details p {
+  margin: 5px 0 0;
+  font-size: 14px; /* Adjust as needed */
+  color: #666;
 }

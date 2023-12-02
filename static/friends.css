@@ -1,4 +1,6 @@
 /* Reset some default styles */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -61,6 +63,8 @@ html {
   background-color: #fff;
   padding: 20px;
   text-align: center;
+  margin-bottom: 0; /* Reduce or remove bottom margin */
+  padding-bottom: 10px; /* You can adjust this as needed */
 }
 
 .profile-info .user-icon {
@@ -147,10 +151,18 @@ html {
 
 /* Content Area */
 .content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  max-height: calc(
+    100vh - 120px
+  ); /* Adjust height considering header and navigation bar */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-top: 10px; /* Reduce top padding */
+  margin-top: 0; /* Reduce or remove top margin */
+  flex-grow: 1;
   padding: 20px;
+  grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+  grid-gap: 20px; /* Spacing between grid items */
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
 }
 
 .post {
@@ -196,17 +208,6 @@ html {
 .nav-link {
   text-decoration: none; /* Remove default hyperlink styling */
   color: inherit; /* Use the parent's text color */
-}
-
-/* Content Area */
-.content {
-  flex-grow: 1;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates two columns */
-  grid-gap: 20px; /* Spacing between grid items */
-  justify-items: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
 }
 
 .post {
@@ -282,24 +283,57 @@ html {
 }
 
 .friends-list {
-  max-height: 80vh; /* Adjust as needed for viewport height */
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding: 0;
+  width: 100%;
   margin: 0;
-  list-style: none; /* Remove bullet points */
+  padding: 0;
+  list-style: none;
+  overflow-y: auto;
+  max-height: calc(100vh - 160px);
 }
 
 .friend-item {
-  padding: 15px; /* Add some padding for spacing */
-  border-bottom: 1px solid #ccc; /* Optional: add a border to each item */
+  display: flex;
+  align-items: center;
+  padding: 0; /* Reduced top and bottom padding */
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Odd items background */
+.friend-avatar {
+  width: 70px !important;
+  height: 70px !important;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.friend-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.friend-details h3 {
+  margin: 0;
+  font-size: 20px; /* Adjust as needed */
+}
+
+.friend-details p {
+  margin: 5px 0 0;
+  font-size: 16px; /* Adjust as needed */
+  color: #666; /* Subdued text color for info */
+}
+
+/* Adjust odd/even styles as needed */
 .friend-item:nth-child(odd) {
-  background-color: #f0f0f0; /* Light color for odd items */
+  background-color: #eaeaea;
 }
 
-/* Even items background */
 .friend-item:nth-child(even) {
-  background-color: #fff; /* White or different color for even items */
+  background-color: #f9f9f9;
 }

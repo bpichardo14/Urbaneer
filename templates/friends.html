@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Urbaneer App Prototype</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='friends.css') }}">
 </head>
 <body>
 
@@ -34,29 +34,32 @@
     </div>
     <nav class="profile-nav">
       <ul class="profile-nav-list">
-        <li class="profile-nav-item">
-          <a href="{{ url_for('friends') }}">Friends</a>
-        </li>
         <li class="profile-nav-item active">
-          <a href="{{ url_for('profile') }}">Likes</a>
-        </li> <!-- Active class for underline effect -->
+            <a href="{{ url_for('friends') }}">Friends</a>
+        </li>
+        <li class="profile-nav-item">
+            <a href="{{ url_for('profile') }}">Likes</a>
+          </li> <!-- Active class for underline effect -->
         <li class="profile-nav-item">Saved</li>
       </ul>
     </nav>
   </header>
 
-<div class="content">
-    {% for place in fake_places %}
-        <div class="place-card">
-            <img src="{{ url_for('static', filename='profile/' + place.image) }}" alt="{{ place.name }}" class="place-image">
-            <div class="place-info">
-                <h3>{{ place.name }}</h3>
-                <p>Distance: {{ place.distance }}</p>
-                <p>Review: {{ place.review }}</p>
-            </div>
-        </div>
-    {% endfor %}
+  <div class="content">
+    <ul class="friends-list">
+        {% for friend in friends %}
+            <li class="friend-item">
+                <img src="{{ url_for('static', filename='image/' + friend.image) }}" alt="{{ friend.name }}" class="friend-avatar">
+                <div class="friend-details">
+                    <h3>{{ friend.name }}</h3>
+                    <p>{{ friend.info }}</p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
 </div>
+
+
 
 
   <div class="navigation-bar">
@@ -66,8 +69,7 @@
         <span>Home</span>
       </a>
     </div>
-    <div><i class="fas fa-plus"></i>
-    </div>
+    <div><i class="fas fa-plus"></i></div>
     <div>
       <a href="{{ url_for('profile') }}" class="nav-link">
         <i class="fas fa-user"></i>
