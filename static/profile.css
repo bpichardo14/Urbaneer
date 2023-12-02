@@ -268,7 +268,9 @@ html {
   background-color: #fff;
   margin: 1px;
   margin-bottom: 20px;
-  flex-basis: calc(50% - 20px); /* Adjust to match the width on the index page, considering the gap */
+  flex-basis: calc(
+    50% - 20px
+  ); /* Adjust to match the width on the index page, considering the gap */
   box-shadow: none;
   overflow: hidden;
   display: flex;
@@ -308,7 +310,7 @@ html {
   top: 0;
   width: 100%; /* Full viewport width */
   height: 100%; /* Full viewport height */
-  background-color: rgba(0,0,0,0.6); /* Dark overlay */
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
   overflow: auto; /* Enable scrolling if needed */
   box-sizing: border-box;
 }
@@ -327,8 +329,6 @@ html {
   /* Other styles... */
 }
 
-
-
 .close-button {
   position: absolute;
   top: 1px;
@@ -346,7 +346,8 @@ html {
 }
 
 /* Style the form elements inside the modal */
-#addPlaceForm input, #addPlaceForm textarea {
+#addPlaceForm input,
+#addPlaceForm textarea {
   width: 100%; /* Full width */
   padding: 10px;
   margin: 5px 0 15px 0;
@@ -358,7 +359,7 @@ html {
 #addPlaceForm button {
   width: 100%;
   padding: 10px;
-  background-color: #4CAF50; /* A green color */
+  background-color: #4caf50; /* A green color */
   color: white;
   border: none;
   border-radius: 5px;
@@ -367,6 +368,7 @@ html {
 
 #addPlaceForm button:hover {
   background-color: #45a049;
+<<<<<<< HEAD
 }
 
 .friend-card {
@@ -375,6 +377,15 @@ html {
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: center;
+=======
+  .friend-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+>>>>>>> bugfix
 }
 
 .friends-list {
@@ -398,4 +409,9 @@ html {
 /* Even items background */
 .friend-item:nth-child(even) {
   background-color: #fff; /* White or different color for even items */
+}
+
+.activity-text {
+  font-size: 11px; /* Smaller text */
+  margin-left: -8px; /* Move text left */
 }
