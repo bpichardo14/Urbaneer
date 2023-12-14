@@ -93,3 +93,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       });
   };
 });
+
+function openTextScreen(contactName) {
+  window.location.href = `/text_screen?contact=${contactName}`;
+}

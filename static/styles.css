@@ -7,7 +7,6 @@ html {
   background: #f0f0f0;
 }
 
-/* Simulate the iPhone outline */
 .phone-outline {
   width: 375px;
   height: 812px;
@@ -21,7 +20,6 @@ html {
   flex-direction: column;
 }
 
-/* Top Status Bar */
 .status-bar {
   width: 100%;
   height: 45px;

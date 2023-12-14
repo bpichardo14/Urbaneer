@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Message - Urbaneer App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='text_screen.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+</head>
+<body>
+
+<div class="phone-outline">
+    <div class="status-bar">
+        <span id="current-time"></span>
+        <div class="status-icons">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-three-quarters"></i>
+        </div>
+    </div>
+
+    <header class="text-header">
+        <div class="user-details">
+            <i class="fa fa-user-circle user-icon"></i>
+            <h1 class="friend-name">{{ selected_contact_name }}</h1>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="message-bubble">
+            <p>Hi there! 🌟 I've been exploring some fantastic spots with Urbaneer, an app that's all about discovering and sharing the best places around. From cozy cafes to vibrant rooftops, there's so much to explore. I've compiled a list of my favorites just for you. Check them out and let's share our experiences! Dive in and find your next favorite spot! 🚀</p>
+        </div>
+    </div>
+    <div class="text-input-area">
+        <input type="text" id="messageInput" placeholder="Type your message here...">
+        <button id="sendButton">Send</button>
+    </div>
+</div>
+</div>
+
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
