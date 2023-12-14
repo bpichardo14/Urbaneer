@@ -1,0 +1,143 @@
+/* Styles for the search container and results */
+.search-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    display: none; /* Initially hidden */
+}
+
+.search-results div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.search-results div:hover {
+    background-color: #f0f0f0;
+}
+
+/* Styles for form inputs and text areas */
+select, textarea, input[type="text"], input[type="number"], input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* Styles for user tagging */
+.user-tagging {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.suggestions {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: none;
+    width: 100%;
+    z-index: 10;
+}
+
+.suggestions div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background-color: #f0f0f0;
+}
+
+#taggedUsersList {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+/* Styles for the modals */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styles for the modal footer */
+.modal-footer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px; /* Align with the left edge of the modal */
+    right: 10px; /* Align with the right edge of the modal */
+    display: flex;
+    align-items: center;
+}
+
+.invite-icon {
+    margin-right: auto; /* Aligns to the far left */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.photo-upload-icon {
+    margin-left: 10px; /* Spacing between the invite icon and the photo icon */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.create-post-button {
+    margin-left: auto; /* Pushes to the far right */
+    padding: 10px 20px;
+    background-color: #008CBA; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styles for secondary modal */
+.modal-secondary {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Additional styles as needed */
+/* ... */

@@ -34,11 +34,19 @@ def show_place(name):
     else:
         return "Place not found", 404
     
+# app.py
+# ...
 @app.route('/add_place', methods=['POST'])
 def add_place():
-    place_name = request.form.get('placeName')
-    place_description = request.form.get('placeDescription')
-    return jsonify({'status': 'success', 'message': 'Place added!'})
+    # Get data from form
+    place_name = request.form['placeName']
+    event_date_time = request.form['eventDateTime']
+    max_participants = request.form['maxParticipants']
+    event_description = request.form['eventDescription']
+    # Process data (e.g., store in database)
+    # ...
+    return jsonify({'status': 'success', 'message': 'Event added!'})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
