@@ -3,7 +3,6 @@ const fakePlaces = [
     { name: "Coffee Central", location: "123 Brew Lane" },
     { name: "Pizza Paradise", location: "456 Dough St" },
     { name: "Sushi Spot", location: "789 Tuna Ave" },
-    // Add more fake place data as needed
 ];
 
 const fakeFriends = [
@@ -18,23 +17,18 @@ const fakeFriends = [
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Event listener for search input
     document.getElementById('placeSearchInput').addEventListener('input', function(e) {
         displaySearchResults(e.target.value);
     });
 
-    // Event listener for invite button (envelope icon)
     document.getElementById('envelopeIcon').addEventListener('click', function() {
         openEventDetailsModal();
     });
 
-    // Event listener for creating a post
     document.getElementById('createPostButton').addEventListener('click', createPost);
 
-    // Event listener for photo upload
     document.getElementById('photoUpload').addEventListener('change', handlePhotoUpload);
 
-    // Event listener for submitting the event details form
     document.getElementById('eventDetailsForm').addEventListener('submit', function(event) {
         event.preventDefault();
         handleEventCreation();
@@ -71,9 +65,7 @@ function closeEventDetailsModal() {
 
 function createPost() {
     console.log('Create Post logic goes here.');
-    // Add logic to handle the post creation and save data.
 
-    // Close the first modal.
     document.getElementById('addPlaceModal').style.display = 'none';
 }
 
@@ -84,9 +76,7 @@ function handlePhotoUpload(event) {
 
 function handleEventCreation() {
     console.log('Event creation logic goes here.');
-    // Add logic to handle the event creation and save data.
 
-    // Close the second modal and reopen the first modal.
     closeEventDetailsModal();
     document.getElementById('addPlaceModal').style.display = 'block';
 }

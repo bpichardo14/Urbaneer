@@ -421,9 +421,9 @@ html {
 }
 
 .message-header {
-  display: flex; /* Enable Flexbox */
-  justify-content: space-between; /* Space elements evenly */
-  align-items: center; /* Vertically center items */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fff;
   padding: 10px;
 }
@@ -432,8 +432,8 @@ html {
   color: #333;
   margin: 0;
   font-size: 24px;
-  flex-grow: 1; /* Allow the title to take up available space */
-  text-align: center; /* Center the title */
+  flex-grow: 1;
+  text-align: center;
 }
 
 .sort-filter-container {
@@ -445,11 +445,11 @@ html {
 .sort-icon,
 .filter-icon {
   flex-grow: 1;
-  text-align: left; /* Align 'Sort By' to the left */
+  text-align: left;
 }
 
 .filter-icon {
-  text-align: right; /* Align 'Filter By' to the right */
+  text-align: right;
 }
 
 .message-list {
@@ -468,37 +468,37 @@ html {
 .message-item {
   display: flex;
   align-items: center;
-  padding: 15px; /* Increased padding for larger size */
-  border-bottom: 1px solid #ddd; /* Add a bottom border to each item */
-  background-color: #f9f9f9; /* Optional: background color for each item */
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f9f9f9;
 }
 
 .message-avatar {
-  width: 60px !important; /* Ensure this size is applied */
-  height: 60px !important; /* Ensure this size is applied */
-  border-radius: 30px; /* Adjusted for the new size */
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 30px; 
   object-fit: cover;
-  margin-right: 15px; /* Increased margin */
+  margin-right: 15px; 
 }
 
 .message-details h3 {
   margin: 0;
-  font-size: 18px; /* Increased font size */
-  color: #333; /* Darker color for better visibility */
+  font-size: 18px;
+  color: #333; 
 }
 
 .message-details p {
-  margin: 5px 0 0; /* Adjusted margin for spacing */
-  font-size: 14px; /* Increased font size */
+  margin: 5px 0 0; 
+  font-size: 14px;
   color: #666;
 }
 
 .message-item:nth-child(odd) {
-  background-color: #f9f9f9; /* Light color for odd items */
+  background-color: #f9f9f9;
 }
 
 .message-item:nth-child(even) {
-  background-color: #eaeaea; /* Slightly different shade for even items */
+  background-color: #eaeaea;
 }
 
 .dropdown-content {
@@ -523,5 +523,5 @@ html {
 
 .sort-icon,
 .filter-icon {
-  position: relative; /* For absolute positioning of dropdown content */
+  position: relative;
 }

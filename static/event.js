@@ -23,6 +23,5 @@ window.onclick = function (event) {
 };
 
 function redirectToEventDetails(eventName) {
-  // Replace this URL with the actual URL pattern for your event details page
   window.location.href = `/event_details/${eventName}`;
 }
