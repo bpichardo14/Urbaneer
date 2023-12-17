@@ -421,8 +421,10 @@ html {
 }
 
 .message-header {
+  display: flex; /* Enable Flexbox */
+  justify-content: space-between; /* Space elements evenly */
+  align-items: center; /* Vertically center items */
   background-color: #fff;
-  text-align: center;
   padding: 10px;
 }
 
@@ -430,6 +432,24 @@ html {
   color: #333;
   margin: 0;
   font-size: 24px;
+  flex-grow: 1; /* Allow the title to take up available space */
+  text-align: center; /* Center the title */
+}
+
+.sort-filter-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.sort-icon,
+.filter-icon {
+  flex-grow: 1;
+  text-align: left; /* Align 'Sort By' to the left */
+}
+
+.filter-icon {
+  text-align: right; /* Align 'Filter By' to the right */
 }
 
 .message-list {
@@ -479,4 +499,29 @@ html {
 
 .message-item:nth-child(even) {
   background-color: #eaeaea; /* Slightly different shade for even items */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content div:hover {
+  background-color: #f1f1f1;
+}
+
+.sort-icon,
+.filter-icon {
+  position: relative; /* For absolute positioning of dropdown content */
 }
