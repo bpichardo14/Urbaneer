@@ -109,22 +109,30 @@ select, textarea, input[type="text"], input[type="number"], input[type="datetime
 
 .modal-footer {
     display: flex;
-    flex-direction: row; /* Children displayed in a row, not a column */
-    align-items: center; /* Vertically center items in the container */
-    justify-content: flex-end; /* Horizontally align items to the end */
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
 }
 
+.footer-icons {
+    display: flex; /* This will lay out the icons next to each other */
+    align-items: center; /* Aligns icons vertically */
+}
 
 .invite-icon, .photo-icon {
-    font-size: 24px; /* Adjust the size as needed */
+    font-size: 24px;
     cursor: pointer;
-    margin-right: 10px; /* Space between icons and button */
+    margin-right: 10px; /* Add space between the icons, if desired */
+}
+
+/* Remove margin-right from the last icon to keep it flush with the button */
+.photo-icon {
+    margin-right: 0;
 }
 
 .post-button {
     padding: 10px 20px;
-    background-color: #008CBA; /* Example blue color */
+    background-color: #008CBA;
     color: white;
     border: none;
     border-radius: 5px;

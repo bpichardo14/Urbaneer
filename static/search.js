@@ -1,4 +1,4 @@
-// Simulated place data
+// Simulated place and friends data
 const fakePlaces = [
     { name: "Coffee Central", location: "123 Brew Lane" },
     { name: "Pizza Paradise", location: "456 Dough St" },
@@ -6,7 +6,6 @@ const fakePlaces = [
     // Add more fake place data as needed
 ];
 
-// Simulated friends data
 const fakeFriends = [
     {'name': 'Brian', 'image': 'brian.png', 'info': 'Good morning everyone', 'userID': 'l98v5s'},
     {'name': 'Chris', 'image': 'chris.png', 'info': 'I am Chris', 'userID': '6xvip7'},
@@ -24,8 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
         displaySearchResults(e.target.value);
     });
 
-    // Event listener for invite button
-    document.getElementById('inviteOthersButton').addEventListener('click', openEventDetailsModal);
+    // Event listener for invite button (envelope icon)
+    document.getElementById('envelopeIcon').addEventListener('click', function() {
+        openEventDetailsModal();
+    });
 
     // Event listener for creating a post
     document.getElementById('createPostButton').addEventListener('click', createPost);
