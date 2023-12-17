@@ -71,16 +71,26 @@ function closeEventDetailsModal() {
 
 function createPost() {
     console.log('Create Post logic goes here.');
+    // Add logic to handle the post creation and save data.
+
+    // Close the first modal.
+    document.getElementById('addPlaceModal').style.display = 'none';
 }
+
 
 function handlePhotoUpload(event) {
     console.log('Photo upload logic will be implemented here.');
 }
 
 function handleEventCreation() {
-    // Logic for handling event creation
     console.log('Event creation logic goes here.');
+    // Add logic to handle the event creation and save data.
+
+    // Close the second modal and reopen the first modal.
+    closeEventDetailsModal();
+    document.getElementById('addPlaceModal').style.display = 'block';
 }
+
 
 function showSuggestions(input) {
     let suggestions = '';

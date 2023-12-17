@@ -177,7 +177,7 @@ html {
   border-top: 1px solid #d1d1d1;
 }
 
-.navigation-bar div,
+.navigation-bar > div,
 .navigation-bar a.nav-link {
   display: flex;
   flex-direction: column;

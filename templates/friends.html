@@ -6,6 +6,7 @@
   <title>Urbaneer App Prototype</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='friends.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
 </head>
 <body>
 
@@ -61,32 +62,27 @@
 
 <div class="navigation-bar">
   <div>
-    <a href="{{ url_for('home') }}" class="nav-link">
-      <i class="fas fa-home"></i>
-      <span>Home</span>
-    </a>
+      <a href="{{ url_for('home') }}" class="nav-link">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+      </a>
   </div>
   <i class="fas fa-plus" id="addPlaceButton"></i>
   <div id="addPlaceModal" class="modal" style="display:none;">
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <form id="addPlaceForm">
-        <input type="text" id="placeName" name="placeName" placeholder="Place Name" required>
-        <textarea id="placeDescription" name="placeDescription" placeholder="Personal Description" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+      {% include 'searchComponent.html' %}
   </div>
-    <div>
+  
+  <div>
       <a href="{{ url_for('profile') }}" class="nav-link">
-        <i class="fas fa-user"></i>
-        <span>Profile</span>
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
       </a>
-    </div>
   </div>
+</div>
 
 </div>
 
 <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+<script src="{{ url_for('static', filename='search.js') }}"></script>
 </body>
 </html>
