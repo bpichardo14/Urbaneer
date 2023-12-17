@@ -126,3 +126,37 @@
 .text-input-area button:hover {
   background-color: #45a049;
 }
+
+.text-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.back-button {
+  position: absolute;
+  left: 10px;
+  margin-bottom: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.user-details {
+  text-align: center;
+}
+
+.user-icon {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.friend-name {
+  margin: 0;
+  font-size: 20px;
+}

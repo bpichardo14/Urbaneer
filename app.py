@@ -43,10 +43,7 @@ def events():
 
 @app.route('/messages')
 def messages():
-
     return render_template('messages.html', friends=group_chat)
-
-
 
 @app.route('/place/<name>')
 def show_place(name):

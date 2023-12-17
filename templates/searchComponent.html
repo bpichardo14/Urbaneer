@@ -1,14 +1,11 @@
-<!-- Main Modal Content -->
 <div class="modal-content">
     <span class="close-button">&times;</span>
-    <h2>New Post</h2> <!-- New Post heading -->
+    <h2>New Post</h2> 
     
     <form id="addPlaceForm">
-        <!-- Search input for places -->
         <input type="text" id="placeSearchInput" name="placeSearch" placeholder="Search Place" autocomplete="off">
         <div id="searchResults" class="search-results"></div>
 
-        <!-- Additional input fields for location, category, etc. -->
         <input type="text" id="placeLocation" name="placeLocation" placeholder="Location" readonly>
         <select id="placeCategory" name="placeCategory" required>
             <option value="">Select Category</option>
@@ -22,38 +19,29 @@
     </form>
 
     <div class="modal-footer">
-        <!-- Container for icons on the left -->
         <div class="footer-icons">
             <i class="fas fa-envelope invite-icon" id="envelopeIcon"></i>
             <i class="fas fa-camera photo-icon"></i>
         </div>
         
-        <!-- Post button on the right -->
         <button type="submit" form="addPlaceForm" class="post-button">Post</button>
     </div>
 
     
 </div>
 
-<!-- Secondary Modal for Event Details -->
 <div id="eventDetailsModal" class="modal-secondary" style="display:none;">
     <div class="modal-content">
         <span class="close-button" onclick="closeEventDetailsModal()">&times;</span>
         <form id="eventDetailsForm">
-            <!-- Event Date and Time -->
             <input type="datetime-local" id="eventDateTime" required>
-            <!-- User Tagging Field -->
             <div class="user-tagging">
                 <input type="text" id="userTagInput" placeholder="Tag Friends" oninput="showSuggestions(this.value)">
                 <div id="userSuggestions" class="suggestions"></div>
             </div>
-            <!-- Display Tagged Users -->
             <div id="taggedUsersList"></div>
-            <!-- Max Participants Field (with dynamic minimum) -->
             <input type="number" id="maxParticipants" required placeholder="Max Participants" min="1">
-            <!-- Event Description -->
             <textarea id="eventDescription" required placeholder="Event Description"></textarea>
-            <!-- Submit Button for Creating Event -->
             <button type="submit">Create Event</button>
         </form>
     </div>
