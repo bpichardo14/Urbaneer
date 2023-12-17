@@ -6,6 +6,7 @@
   <title>Events - Urbaneer App</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='messages.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
 </head>
 <body>
 
@@ -50,48 +51,43 @@
     </ul>
   </div>
 
-<div class="navigation-bar">
-  <div>
-    <a href="{{ url_for('home') }}" class="nav-link">
-      <i class="fas fa-home"></i>
-      <span>Home</span>
-    </a>
-  </div>
-  <div>
-    <a href="{{ url_for('events') }}" class="nav-link event-link">
-      <i class="fas fa-calendar-alt"></i>
-      <span>Events</span>
-    </a>
-  </div>
-  
-  <i class="fas fa-plus" id="addPlaceButton"></i>
-  <div id="addPlaceModal" class="modal" style="display:none;">
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <form id="addPlaceForm">
-        <input type="text" id="placeName" name="placeName" placeholder="Place Name" required>
-        <textarea id="placeDescription" name="placeDescription" placeholder="Personal Description" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
+  <div class="navigation-bar">
+    <div>
+      <a href="{{ url_for('home') }}" class="nav-link">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
     </div>
-  </div>
+    <div>
+      <a href="{{ url_for('events') }}" class="nav-link event-link">
+        <i class="fas fa-calendar-alt"></i>
+        <span>Events</span>
+      </a>
+    </div>
+    
+    <i class="fas fa-plus" id="addPlaceButton"></i>
+        <div id="addPlaceModal" class="modal" style="display:none;">
+            {% include 'searchComponent.html' %}
+        </div>
 
-  <div>
-    <a href="{{ url_for('messages') }}" class="nav-link message-link">
-      <i class="fas fa-comment-alt"></i>
-      <span class="message-text">Messages</span>
-    </a>
-  </div>
-  
-  <div>
-    <a href="{{ url_for('profile') }}" class="nav-link">
-      <i class="fas fa-user"></i>
-      <span>Profile</span>
-    </a>
-  </div>
+    <div>
+      <a href="{{ url_for('messages') }}" class="nav-link message-link">
+        <i class="fas fa-comment-alt"></i>
+        <span class="message-text">Messages</span>
+      </a>
+    </div>
+    
+    <div>
+      <a href="{{ url_for('profile') }}" class="nav-link">
+        <i class="fas fa-user"></i>
+        <span>Profile</span>
+      </a>
+    </div>
   </div>
 </div>
 
 <script src="{{ url_for('static', filename='event.js') }}"></script>
+<script src="{{ url_for('static', filename='search.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>
