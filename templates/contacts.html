@@ -47,6 +47,13 @@
       <span>Home</span>
     </a>
   </div>
+  <div>
+    <a href="{{ url_for('events') }}" class="nav-link">
+      <i class="fas fa-calendar-alt"></i>
+      <span>Events</span>
+    </a>
+  </div>
+  
   <i class="fas fa-plus" id="addPlaceButton"></i>
   <div id="addPlaceModal" class="modal" style="display:none;">
     <div class="modal-content">
@@ -58,12 +65,20 @@
       </form>
     </div>
   </div>
-    <div>
-      <a href="{{ url_for('profile') }}" class="nav-link">
-        <i class="fas fa-user"></i>
-        <span>Profile</span>
-      </a>
-    </div>
+
+  <div>
+    <a href="{{ url_for('messages') }}" class="nav-link"> <!-- Update this href to your messages page route -->
+      <i class="fas fa-comment-alt"></i> <!-- Message icon -->
+      <span>Messages</span>
+    </a>
+  </div>
+  
+  <div>
+    <a href="{{ url_for('profile') }}" class="nav-link">
+      <i class="fas fa-user"></i>
+      <span>Profile</span>
+    </a>
+  </div>
   </div>
 </div>
 

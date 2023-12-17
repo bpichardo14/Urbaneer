@@ -163,6 +163,7 @@ html {
   align-items: center;
   text-align: center;
   flex-grow: 1;
+  padding: 5px; /* Adjust padding if needed */
 }
 
 .navigation-bar .fas {

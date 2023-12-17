@@ -35,6 +35,17 @@ def settings():
 def contacts():
     return render_template('contacts.html', contacts=fake_contact)
 
+@app.route('/events')
+def events():
+    # Your logic to fetch or display events goes here
+    return render_template('events.html')
+
+@app.route('/messages')
+def messages():
+    # Your logic to fetch or display events goes here
+    return render_template('messages.html')
+
+
 @app.route('/place/<name>')
 def show_place(name):
     place = next((item for item in fake_places if item["name"] == name), None)
