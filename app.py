@@ -2,6 +2,8 @@ from flask import Flask, render_template, jsonify, request
 from fake_data import fake_places, friends_places
 from fake_friends import fake_friends
 from fake_activity import fake_activity
+from fake_contact import fake_contact
+from group_chat import group_chat
 
 
 app = Flask(__name__)
@@ -26,6 +28,25 @@ def friends():
 def profile():
     return render_template('profile.html', fake_places=fake_places)
 
+@app.route('/settings')
+def settings():
+    return render_template('settings.html') 
+
+@app.route('/contacts')
+def contacts():
+    return render_template('contacts.html', contacts=fake_contact)
+
+@app.route('/events')
+def events():
+    # Your logic to fetch or display events goes here
+    return render_template('events.html')
+
+@app.route('/messages')
+def messages():
+    # Your logic to fetch or display events goes here
+    return render_template('messages.html', friends=group_chat)
+
+
 @app.route('/place/<name>')
 def show_place(name):
     place = next((item for item in fake_places if item["name"] == name), None)
@@ -47,6 +68,12 @@ def add_place():
     # ...
     return jsonify({'status': 'success', 'message': 'Event added!'})
 
+
+
+@app.route('/text_screen')
+def text_screen():
+    contact_name = request.args.get('contact')
+    return render_template('text_screen.html', selected_contact_name=contact_name)
 
 if __name__ == '__main__':
     app.run(debug=True)

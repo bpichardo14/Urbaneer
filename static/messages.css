@@ -13,7 +13,6 @@ html {
   background: #f0f0f0;
 }
 
-/* Simulate the iPhone outline */
 .phone-outline {
   width: 375px;
   height: 812px;
@@ -27,7 +26,6 @@ html {
   flex-direction: column;
 }
 
-/* Top Status Bar */
 .status-bar {
   width: 100%;
   height: 45px;
@@ -57,11 +55,12 @@ html {
   color: white;
 }
 
-/* Profile Header */
 .profile-header {
   background-color: #fff;
   padding: 20px;
   text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 10px;
 }
 
 .profile-info .user-icon {
@@ -99,7 +98,6 @@ html {
   margin-top: 5px;
 }
 
-/* Profile Navigation */
 .profile-nav {
   background-color: #fff;
   border-bottom: 2px solid #eee;
@@ -139,17 +137,25 @@ html {
   transform: translateX(-50%);
 }
 
-.profile-nav-item a:hover,
+.profile-nav-item a,
 .profile-nav-item a:visited,
+.profile-nav-item a:hover,
 .profile-nav-item a:active {
   color: inherit;
   text-decoration: none;
 }
 
-/* Content Area */
 .content {
   max-height: calc(100vh - 120px);
   overflow-y: auto;
+  padding-top: 10px;
+  margin-top: 0;
+  flex-grow: 1;
+  padding: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
 }
 
 .post {
@@ -176,7 +182,7 @@ html {
   border-top: 1px solid #d1d1d1;
 }
 
-.navigation-bar > div,
+.navigation-bar div,
 .navigation-bar a.nav-link {
   display: flex;
   flex-direction: column;
@@ -212,8 +218,11 @@ html {
   padding-left: 16px;
 }
 
-/* Content Area */
 .content {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding-top: 10px;
+  margin-top: 0;
   flex-grow: 1;
   padding: 20px;
   grid-template-columns: repeat(2, 1fr);
@@ -294,7 +303,7 @@ html {
   text-align: center;
 }
 
-.activity-list {
+.friends-list {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -303,38 +312,171 @@ html {
   max-height: calc(100vh - 160px);
 }
 
-.activity-item {
+.friend-item {
   display: flex;
   align-items: center;
-  justify-content: start;
-  padding: 15px;
-  margin: 5px 0;
+  padding: 0;
+  margin: 10px 0;
   border-radius: 10px;
   background-color: #f9f9f9;
-  font-size: 16px;
+  font-size: 18px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.activity-avatar {
-  width: 60px; /* Adjust as needed */
-  height: 60px;
+.friend-avatar {
+  width: 70px !important;
+  height: 70px !important;
   border-radius: 50%;
-  margin-right: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 20px;
   object-fit: cover;
 }
 
-.activity-details {
+.friend-details {
   display: flex;
   flex-direction: column;
 }
 
-.activity-details h3 {
+.friend-details h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
 }
 
-.activity-details p {
+.friend-details p {
   margin: 5px 0 0;
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
+}
+
+.friend-item:nth-child(odd) {
+  background-color: #eaeaea;
+}
+
+.friend-item:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 300px;
+}
+
+.close-button {
+  position: absolute;
+  top: 1px;
+  right: 3px;
+  color: #aaa;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+}
+
+#addPlaceForm input,
+#addPlaceForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+#addPlaceForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #c99f25;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-header {
+  background-color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.message-header h1 {
+  color: #333;
+  margin: 0;
+  font-size: 24px;
+}
+
+.message-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.message-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.message-item {
+  display: flex;
+  align-items: center;
+  padding: 15px; /* Increased padding for larger size */
+  border-bottom: 1px solid #ddd; /* Add a bottom border to each item */
+  background-color: #f9f9f9; /* Optional: background color for each item */
+}
+
+.message-avatar {
+  width: 60px !important; /* Ensure this size is applied */
+  height: 60px !important; /* Ensure this size is applied */
+  border-radius: 30px; /* Adjusted for the new size */
+  object-fit: cover;
+  margin-right: 15px; /* Increased margin */
+}
+
+.message-details h3 {
+  margin: 0;
+  font-size: 18px; /* Increased font size */
+  color: #333; /* Darker color for better visibility */
+}
+
+.message-details p {
+  margin: 5px 0 0; /* Adjusted margin for spacing */
+  font-size: 14px; /* Increased font size */
+  color: #666;
+}
+
+.message-item:nth-child(odd) {
+  background-color: #f9f9f9; /* Light color for odd items */
+}
+
+.message-item:nth-child(even) {
+  background-color: #eaeaea; /* Slightly different shade for even items */
 }

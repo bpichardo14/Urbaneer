@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Urbaneer App Prototype</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='activity.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='invite.css') }}">
+  <script src="{{ url_for('static', filename='text.js') }}"></script>
 </head>
 <body>
 
@@ -21,23 +20,25 @@
       <i class="fas fa-battery-three-quarters"></i>
     </div>
   </div>
+  
 
-  <header class="profile-header">
-    <div class="profile-info">
-      <h1>Urbaneer</h1>
-      <h2>Activity</h2>
-  </header>
+  <div class="settings-container">
+    <header class="settings-header">
+        <h1>Contacts</h1>
+    </header>
 
-  <ul class="activity-list">
-    {% for activity in activities %}
-        <li class="activity-item">
-            <div class="activity-details">
-                <h3>{{ activity.name }}</h3>
-                <p>{{ activity.activity }}</p>
-            </div>
-        </li>
-    {% endfor %}
-</ul>
+    <ul class="contact-list">
+        {% for contact in contacts %}
+            <li class="contact-item" onclick="openTextScreen('{{ contact.name }}')">
+                <div class="contact-details">
+                    <h3>{{ contact.name }}</h3>
+                    <p>{{ contact.contact }}</p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+    
+</div>
 
 <div class="navigation-bar">
   <div>
@@ -54,9 +55,16 @@
   </div>
   
   <i class="fas fa-plus" id="addPlaceButton"></i>
-      <div id="addPlaceModal" class="modal" style="display:none;">
-          {% include 'searchComponent.html' %}
-      </div>
+  <div id="addPlaceModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <form id="addPlaceForm">
+        <input type="text" id="placeName" name="placeName" placeholder="Place Name" required>
+        <textarea id="placeDescription" name="placeDescription" placeholder="Personal Description" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
 
   <div>
     <a href="{{ url_for('messages') }}" class="nav-link message-link">
@@ -71,11 +79,9 @@
       <span>Profile</span>
     </a>
   </div>
-</div>
-
+  </div>
 </div>
 
 <script src="{{ url_for('static', filename='scripts.js') }}"></script>
-<script src="{{ url_for('static', filename='search.js') }}"></script>
 </body>
 </html>

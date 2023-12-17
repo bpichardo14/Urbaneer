@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Urbaneer App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='settings.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+  </head>
+<body>
+
+<div class="phone-outline">
+    <div class="status-bar">
+        <span id="current-time"></span>
+        <div class="status-icons">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-three-quarters"></i>
+        </div>
+    </div>
+
+    <div class="settings-container">
+        <header class="settings-header">
+            <div style="display: flex; justify-content: space-between; align-items: center; ">
+                <h1>Settings</h1>
+            </div>
+        </header>
+
+        <div class="user-profile">
+            <div class="user-info">
+                <i class="fa fa-user-circle user-icon"></i>
+                <span class="user-name">Katherine Doe</span>
+            </div>
+            <div class="qr-code">
+                <i class="fas fa-qrcode"></i> 
+            </div>
+        </div>
+
+        <div class="settings-options">
+          <div class="option">
+            <i class="fas fa-user"></i>
+            <span class="option-name">Account</span>
+        </div>
+        <div class="option">
+          <a href="{{ url_for('contacts') }}" class="option-link">
+            <i class="fas fa-user-plus"></i>
+            <span class="friend">Invite a Friend</span>
+          </a>
+        </div>
+          <div class="option">
+              <i class="fas fa-camera"></i>
+              <span class="option-name">Photo</span>
+          </div>
+          <div class="option">
+              <i class="fas fa-heart"></i>
+              <span class="option-name">Likes</span>
+          </div>
+          <div class="option">
+              <i class="fas fa-bell"></i>
+              <span class="option-name">Notifications</span>
+          </div>
+          <div class="option">
+              <i class="fas fa-lock"></i>
+              <span class="option-name">Privacy</span>
+          </div>
+          <div class="option">
+              <i class="fas fa-question-circle"></i>
+              <span class="option-name">Help</span>
+          </div>
+          <div class="option">
+              <i class="fas fa-info-circle"></i>
+              <span class="option-name">About</span>
+          </div>      
+      </div>
+    </div>
+
+    <div class="navigation-bar">
+      <div>
+        <a href="{{ url_for('home') }}" class="nav-link">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+      </div>
+      <div>
+        <a href="{{ url_for('events') }}" class="nav-link event-link">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Events</span>
+        </a>
+      </div>
+      
+      <i class="fas fa-plus" id="addPlaceButton"></i>
+      <div id="addPlaceModal" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <form id="addPlaceForm">
+            <input type="text" id="placeName" name="placeName" placeholder="Place Name" required>
+            <textarea id="placeDescription" name="placeDescription" placeholder="Personal Description" required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+  
+      <div>
+        <a href="{{ url_for('messages') }}" class="nav-link message-link">
+          <i class="fas fa-comment-alt"></i>
+          <span class="message-text">Messages</span>
+        </a>
+      </div>
+      
+      <div>
+        <a href="{{ url_for('profile') }}" class="nav-link">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </a>
+      </div>
+      </div>
+</div>
+
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

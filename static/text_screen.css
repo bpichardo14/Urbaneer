@@ -1,0 +1,128 @@
+@import url("profile.css");
+
+.settings-container {
+  padding: 20px;
+}
+
+.settings-header h1 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.user-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 20px;
+}
+
+.settings-options .option {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.settings-options .option i {
+  margin-right: 15px;
+}
+
+.text-header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.user-icon {
+  align-self: center;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.text-header h1 {
+  margin: 0;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.message-bubble {
+  position: relative;
+  background-color: #eaeaea;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  margin-left: auto;
+}
+
+.message-bubble::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #eaeaea;
+  transform: translateY(-50%);
+}
+
+.content {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.text-input-area {
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.text-input-area input[type="text"] {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.text-input-area button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.text-input-area button:hover {
+  background-color: #45a049;
+}

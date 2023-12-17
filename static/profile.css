@@ -166,10 +166,9 @@ html {
   text-align: center;
 }
 
-/* Bottom Navigation Bar */
 .navigation-bar {
   height: 70px;
-  min-height: 71px;
+  min-height: 70px;
   background: #f8f8f8;
   display: flex;
   justify-content: space-around;
@@ -188,13 +187,29 @@ html {
 
 .navigation-bar .fas {
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+  font-size: 18px;
   margin-bottom: 4px;
 }
 
 .nav-link {
   text-decoration: none;
   color: inherit;
+}
+
+.navigation-bar .nav-link a:visited {
+  color: inherit;
+}
+
+.message-text {
+  font-size: 15px;
+}
+
+.event-link {
+  padding-right: 16px;
+}
+
+.message-link {
+  padding-left: 16px;
 }
 
 .post {
@@ -266,9 +281,7 @@ html {
   background-color: #fff;
   margin: 1px;
   margin-bottom: 20px;
-  flex-basis: calc(
-    50% - 20px
-  );
+  flex-basis: calc(50% - 20px);
   box-shadow: none;
   overflow: hidden;
   display: flex;
@@ -340,7 +353,6 @@ html {
   text-decoration: none;
 }
 
-/* Style the form elements inside the modal */
 #addPlaceForm input,
 #addPlaceForm textarea {
   width: 100%;
@@ -386,12 +398,10 @@ html {
   border-bottom: 1px solid #ccc;
 }
 
-/* Odd items background */
 .friend-item:nth-child(odd) {
   background-color: #f0f0f0;
 }
 
-/* Even items background */
 .friend-item:nth-child(even) {
   background-color: #fff;
 }
@@ -399,4 +409,21 @@ html {
 .activity-text {
   font-size: 11px;
   margin-left: -8px;
+}
+
+.settings-icon {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  font-size: 24px;
+  color: #666;
+}
+
+.settings-icon a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.settings-icon i:hover {
+  color: #c99f25;
 }

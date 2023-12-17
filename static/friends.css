@@ -14,8 +14,8 @@ html {
 }
 
 .phone-outline {
-  width: 375px; 
-  height: 812px; 
+  width: 375px;
+  height: 812px;
   margin: auto;
   border-radius: 40px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -28,12 +28,12 @@ html {
 
 .status-bar {
   width: 100%;
-  height: 45px; 
-  background: black; 
+  height: 45px;
+  background: black;
   color: white;
-  font-size: 10px; 
-  line-height: 40px; 
-  padding: 0 15px; 
+  font-size: 10px;
+  line-height: 40px;
+  padding: 0 15px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -59,30 +59,30 @@ html {
   background-color: #fff;
   padding: 20px;
   text-align: center;
-  margin-bottom: 0; 
-  padding-bottom: 10px; 
+  margin-bottom: 0;
+  padding-bottom: 10px;
 }
 
 .profile-info .user-icon {
   display: inline-block;
-  font-size: 50px; 
+  font-size: 50px;
   margin-bottom: 10px;
 }
 
 .profile-info h1 {
-  color: #c99f25; 
+  color: #c99f25;
   margin: 0;
   font-size: 30px;
 }
 
 .user-details {
   display: flex;
-  align-items: center; 
-  gap: 10px; 
+  align-items: center;
+  gap: 10px;
 }
 
 .profile-info h2 {
-  color: #000; 
+  color: #000;
   margin-bottom: 5px;
   font-size: 24px;
 }
@@ -93,7 +93,7 @@ html {
 }
 
 .profile-info p {
-  color: #666; 
+  color: #666;
   font-size: 16px;
   margin-top: 5px;
 }
@@ -115,49 +115,46 @@ html {
 
 .profile-nav-item {
   padding: 10px 15px;
-  color: inherit; 
-  text-decoration: none; 
+  color: inherit;
+  text-decoration: none;
 }
 
 .profile-nav-item.active {
-  font-weight: bold; 
-  position: relative; 
+  font-weight: bold;
+  position: relative;
   padding: 10px px;
 }
 
 .profile-nav-item.active::after {
   content: "";
   display: block;
-  width: 25%; 
+  width: 25%;
   height: 3px;
-  background-color: black; 
+  background-color: black;
   position: absolute;
   bottom: 3px;
   left: 50%;
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
 }
 
 .profile-nav-item a,
 .profile-nav-item a:visited,
 .profile-nav-item a:hover,
 .profile-nav-item a:active {
-  color: inherit; 
-  text-decoration: none; 
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Content Area */
 .content {
-  max-height: calc(
-    100vh - 120px
-  ); 
-  overflow-y: auto; 
-  padding-top: 10px; 
-  margin-top: 0; 
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding-top: 10px;
+  margin-top: 0;
   flex-grow: 1;
   padding: 20px;
-  grid-template-columns: repeat(2, 1fr); 
-  grid-gap: 20px; 
-  justify-items: center; 
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
   align-items: center;
 }
 
@@ -175,10 +172,9 @@ html {
   text-align: center;
 }
 
-/* Bottom Navigation Bar */
 .navigation-bar {
-  min-height: 71px;
   height: 70px;
+  min-height: 70px;
   background: #f8f8f8;
   display: flex;
   justify-content: space-around;
@@ -189,21 +185,37 @@ html {
 .navigation-bar > div,
 .navigation-bar a.nav-link {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   flex-grow: 1;
 }
 
 .navigation-bar .fas {
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  margin-bottom: 4px; 
+  font-size: 18px;
+  margin-bottom: 4px;
 }
 
 .nav-link {
-  text-decoration: none; 
+  text-decoration: none;
   color: inherit;
+}
+
+.navigation-bar .nav-link a:visited {
+  color: inherit;
+}
+
+.message-text {
+  font-size: 15px;
+}
+
+.event-link {
+  padding-right: 16px;
+}
+
+.message-link {
+  padding-left: 16px;
 }
 
 .post {
@@ -215,7 +227,7 @@ html {
 }
 
 .post img {
-  width: 100%; 
+  width: 100%;
   display: block;
   border-radius: 10px;
   object-fit: cover;
@@ -230,9 +242,9 @@ html {
   padding: 0 10px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
-  background: rgba(255, 255, 255, 0.8); 
-  border-bottom-left-radius: 10px; 
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
@@ -241,7 +253,7 @@ html {
   top: 10px;
   right: 10px;
   font-size: 24px;
-  color: #ffffff; 
+  color: #ffffff;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -249,9 +261,9 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px; 
+  padding: 5px 10px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: -10px;
   position: absolute;
   bottom: 0;
@@ -290,7 +302,7 @@ html {
 .friend-item {
   display: flex;
   align-items: center;
-  padding: 0; 
+  padding: 0;
   margin: 10px 0;
   border-radius: 10px;
   background-color: #f9f9f9;
@@ -321,11 +333,10 @@ html {
 
 .friend-details p {
   margin: 5px 0 0;
-  font-size: 16px; 
-  color: #666; 
+  font-size: 16px;
+  color: #666;
 }
 
-/* Adjust odd/even styles as needed */
 .friend-item:nth-child(odd) {
   background-color: #eaeaea;
 }
@@ -336,13 +347,13 @@ html {
 
 .modal {
   display: none;
-  position: fixed; 
-  z-index: 2; 
+  position: fixed;
+  z-index: 2;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   overflow: auto;
   box-sizing: border-box;
 }
@@ -376,8 +387,8 @@ html {
   text-decoration: none;
 }
 
-/* Style the form elements inside the modal */
-#addPlaceForm input, #addPlaceForm textarea {
+#addPlaceForm input,
+#addPlaceForm textarea {
   width: 100%;
   padding: 10px;
   margin: 5px 0 15px 0;

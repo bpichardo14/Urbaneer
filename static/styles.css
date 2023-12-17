@@ -7,7 +7,6 @@ html {
   background: #f0f0f0;
 }
 
-/* Simulate the iPhone outline */
 .phone-outline {
   width: 375px;
   height: 812px;
@@ -21,7 +20,6 @@ html {
   flex-direction: column;
 }
 
-/* Top Status Bar */
 .status-bar {
   width: 100%;
   height: 45px;
@@ -108,13 +106,11 @@ html {
   color: inherit;
 }
 
-/* Main Content */
 .content {
   flex-grow: 1;
   overflow: auto;
 }
 
-/* Placeholder for the map and other contents */
 .placeholder {
   background: #eaeaea;
   height: 150px;
@@ -147,7 +143,6 @@ html {
   right: 20px;
 }
 
-/* Bottom Navigation Bar */
 .navigation-bar {
   height: 70px;
   min-height: 70px;
@@ -169,7 +164,7 @@ html {
 
 .navigation-bar .fas {
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+  font-size: 18px;
   margin-bottom: 4px;
 }
 
@@ -178,12 +173,20 @@ html {
   color: inherit;
 }
 
-.navigation-bar img {
-  margin-bottom: 4px;
-}
-
 .navigation-bar .nav-link a:visited {
   color: inherit;
+}
+
+.message-text {
+  font-size: 15px;
+}
+
+.event-link {
+  padding-right: 16px;
+}
+
+.message-link {
+  padding-left: 16px;
 }
 
 .map-container {
