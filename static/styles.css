@@ -186,7 +186,7 @@ html {
 }
 
 .message-link {
-  padding-left: 16px;
+  padding-left: 3px;
 }
 
 .map-container {
@@ -288,6 +288,7 @@ html {
 
 #current-time {
   color: white;
+  padding-left: 10px;
 }
 
 .modal {
