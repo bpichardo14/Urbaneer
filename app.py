@@ -39,13 +39,13 @@ def contacts():
 
 @app.route('/events')
 def events():
-    # Your logic to fetch or display events goes here
     return render_template('events.html', friends=event)
 
 @app.route('/messages')
 def messages():
-    # Your logic to fetch or display events goes here
+
     return render_template('messages.html', friends=group_chat)
+
 
 
 @app.route('/place/<name>')

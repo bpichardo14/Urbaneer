@@ -30,21 +30,9 @@
     <div class="sort-filter-container">
       <div class="sort-icon" onclick="toggleSortOptions()">
         <span class="activity-text">Sort By</span>
-        <div id="sortOptions" class="dropdown-content">
-          <!-- Sort options here -->
-          <div>Amity Hall</div>
-          <div>Tuscany Steakhouse</div>
-          <!-- Add more options as needed -->
-        </div>
       </div>
       <div class="filter-icon" onclick="toggleFilterOptions()">
         <span class="activity-text">Filter By</span>
-        <div id="filterOptions" class="dropdown-content">
-          <!-- Filter options here -->
-          <div>Option A</div>
-          <div>Option B</div>
-          <!-- Add more options as needed -->
-        </div>
       </div>
     </div>
     <ul class="message-list">
@@ -104,6 +92,6 @@
   </div>
 </div>
 
-<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+<script src="{{ url_for('static', filename='event.js') }}"></script>
 </body>
 </html>
