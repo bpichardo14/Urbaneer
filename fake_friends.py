@@ -9,7 +9,7 @@ fake_friends = [
     },
     {'name': 'Francis',
     'image': 'eun.png',  
-    'info' : 'The King of fighter'
+    'info' : 'The King of Fighter'
     },
     {'name': 'Julia',
     'image': 'julia.png',  
@@ -25,7 +25,7 @@ fake_friends = [
     },
     {'name': 'Whitney',
     'image': 'whitney.png', 
-    'info' : 'Legend'
+    'info' : 'The Voice'
     },
     {'name': 'Will',
     'image': 'will.png',  
