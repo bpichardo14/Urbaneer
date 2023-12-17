@@ -148,9 +148,7 @@ html {
 
 /* Content Area */
 .content {
-  max-height: calc(
-    100vh - 120px
-  );
+  max-height: calc(100vh - 120px);
   overflow-y: auto;
 }
 
@@ -168,9 +166,9 @@ html {
   text-align: center;
 }
 
-/* Bottom Navigation Bar */
 .navigation-bar {
   height: 70px;
+  min-height: 70px;
   background: #f8f8f8;
   display: flex;
   justify-content: space-around;
@@ -189,13 +187,29 @@ html {
 
 .navigation-bar .fas {
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+  font-size: 18px;
   margin-bottom: 4px;
 }
 
 .nav-link {
   text-decoration: none;
   color: inherit;
+}
+
+.navigation-bar .nav-link a:visited {
+  color: inherit;
+}
+
+.message-text {
+  font-size: 15px;
+}
+
+.event-link {
+  padding-right: 16px;
+}
+
+.message-link {
+  padding-left: 16px;
 }
 
 /* Content Area */

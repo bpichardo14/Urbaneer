@@ -3,6 +3,7 @@ from fake_data import fake_places, friends_places
 from fake_friends import fake_friends
 from fake_activity import fake_activity
 from fake_contact import fake_contact
+from group_chat import group_chat
 
 
 app = Flask(__name__)
@@ -43,7 +44,7 @@ def events():
 @app.route('/messages')
 def messages():
     # Your logic to fetch or display events goes here
-    return render_template('messages.html')
+    return render_template('messages.html', friends=group_chat)
 
 
 @app.route('/place/<name>')
