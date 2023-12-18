@@ -37,6 +37,128 @@ fake_places = [
     }
 ]
 
+gyms = [
+        {
+            "name": "Planet Fitness",
+            "location": "163 W 125th St, New York, NY 10027",
+            "rating": 4.3,
+            "price": 2,
+            "description": "Gym in Harlem"
+        },
+        {
+            "name": "Blink Fitness",
+            "location": "301 W 145th St, New York, NY 10039",
+            "rating": 4.3,
+            "price": 2,
+            "description": "Gym in Harlem"
+        },
+        {
+            "name": "Harlem Cycle",
+            "location": "2350 Adam Clayton Powell Jr Blvd, New York, NY 10030",
+            "rating": 4.9,
+            "price": 2,
+            "description": "Gym in Harlem"
+        },
+        {
+            "name": "Harlem Yoga Studio",
+            "location": "44 W 125th St #3, New York, NY 10027",
+            "rating": 4.8,
+            "price": 2,
+            "description": "Gym in Harlem"
+        },
+        {
+            "name": "Harlem Boxing",
+            "location": "1960 Madison Ave, New York, NY 10035",
+            "rating": 4.8,
+            "price": 2,
+            "description": "Gym in Harlem"
+        }
+    ]
+
+clothing_stores = [
+        {
+            "name": "Harlem Haberdashery",
+            "location": "245 Lenox Ave, New York, NY 10027",
+            "distance": "15 min away",
+            "image":"harlem.jpeg",
+            "likes":50,
+            "description": "Clothing store in Harlem",
+            
+        },
+        {
+            "name": "Harlem Underground",
+            "location": "20 E 125th St, New York, NY 10035",
+            "distance": "10 min away",
+            "image":"underground.jpeg",
+            "likes":35,
+            "description": "Clothing store in Harlem"
+        },
+        {
+            "name": "Harlem's Heaven Hat Boutique",
+            "location": "2538 Adam Clayton Powell Jr Blvd, New York, NY 10039",
+            "distance": "5 min away",
+            "image":"hat.webp",
+            "likes":20,
+            "description": "Clothing store in Harlem"
+        },
+        {
+            "name": "Rainbow Shops",
+            "location": "308 W 125th St, New York, NY 10027",
+            "distance": "20 min away",
+            "image":"Rainbow.jpeg",
+            "likes": 10,
+            "description": "Clothing store in Harlem"
+        },
+        {
+            "name":"K&G Fashion Superstore",
+            "location": "2321 Frederick Douglass Blvd",
+            "distance": "22 min away",
+            "image":"K&G.webp",
+            "likes": 5,
+            "description": "Clothing store in New York"
+        },
+        {
+            "name":"Danice",
+            "location": "305 W 125th St, New York, NY 10027",
+            "distance": "15 min away",
+            "image":"Danice.jpeg",
+            "likes": 25,
+            "description": "Clothing store in Harlem"
+        }
+    ]
+
+grocery_stores = [{
+    "name": "Fine Fare Supermarkets",
+    "location": "469 Malcolm X Blvd, New York, NY 10037",
+    "rating": 4.1,
+    "price": 1,
+    "description": "Grocery store in Harlem"
+    },
+    {
+    "name":"Morton Williams Supermarkets",
+    "location": "2780 Broadway, New York, NY 10025",
+    "rating": 4.3,
+    "price": 2,
+    "description": "Grocery store in Harlem"
+    },
+    {
+    "name":"Whole Foods Market",
+    "location": "100 W 125th St, New York, NY 10027",
+    "rating": 4.3,
+    "price": 2,
+    "description": "Grocery store in Harlem"
+    },
+    {
+    "name":"Fine Fare Supermarkets",
+    "location": "469 Malcolm X Blvd, New York, NY 10037",
+    "rating": 4.1,
+    "price": 1,
+    "description": "Grocery store in Harlem"
+    },
+]
+
+
+
 friends_places = [
     {
         'name': 'Danny',
@@ -64,4 +186,17 @@ friends_places = [
         'distance': '8 min away',
         'review': 'food was great'
     },
+]
+
+fake_saved = [
+    {
+        'name': 'Amity Hall',
+        'location': {'lat': 40.730610, 'lng': -73.935242},
+        'address': '80 3rd Ave, New York, NY 10003',
+        'description': 'A great place to enjoy craft beers and classic American pub fare.',
+        'image': 'Amity_Hall.jpeg', 
+        'likes': 134,
+        'distance': '5 min away'
+    }
+    
 ]

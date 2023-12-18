@@ -26,7 +26,26 @@ window.onload = function () {
               <p>Liked by ${place.likes} others</p>
             `;
 
+          const iconDiv = document.createElement("div");
+          iconDiv.className = "place-icons";
+
+          const heartIcon = document.createElement("i");
+          heartIcon.className = "far fa-heart like-heart";
+          heartIcon.addEventListener("click", function () {
+            heartIcon.classList.toggle("liked");
+          });
+
+          const bookmarkIcon = document.createElement("i");
+          bookmarkIcon.className = "far fa-bookmark like-bookmark";
+          bookmarkIcon.addEventListener("click", function () {
+            bookmarkIcon.classList.toggle("bookmarked");
+          });
+
+          iconDiv.appendChild(heartIcon);
+          iconDiv.appendChild(bookmarkIcon);
+
           listItem.appendChild(image);
+          listItem.appendChild(iconDiv);
           listItem.appendChild(infoDiv);
           placesList.appendChild(listItem);
         });

@@ -1,48 +1,72 @@
 <div class="modal-content">
-    <span class="close-button">&times;</span>
-    <h2>New Post</h2> 
-    
-    <form id="addPlaceForm">
-        <input type="text" id="placeSearchInput" name="placeSearch" placeholder="Search Place" autocomplete="off">
-        <div id="searchResults" class="search-results"></div>
+  <span class="close-button">&times;</span>
+  <h2>Leave A Review</h2>
 
-        <input type="text" id="placeLocation" name="placeLocation" placeholder="Location" readonly>
-        <select id="placeCategory" name="placeCategory" required>
-            <option value="">Select Category</option>
-            <option value="restaurants">Restaurants</option>
-            <option value="bars">Bars</option>
-            <option value="groceries">Groceries</option>
-            <option value="cleaning">Cleaning</option>
-        </select>
-        <textarea id="placeDescription" name="placeDescription" placeholder="Personal Place Description" required></textarea>
-    
-    </form>
+  <form id="addPlaceForm">
+    <input
+      type="text"
+      id="placeSearchInput"
+      name="placeSearch"
+      placeholder="Search Place"
+      autocomplete="off"
+    />
+    <div id="searchResults" class="search-results"></div>
 
-    <div class="modal-footer">
-        <div class="footer-icons">
-            <i class="fas fa-envelope invite-icon" id="envelopeIcon"></i>
-            <i class="fas fa-camera photo-icon"></i>
-        </div>
-        
-        <button type="submit" form="addPlaceForm" class="post-button">Post</button>
-    </div>
+    <input
+      type="text"
+      id="placeLocation"
+      name="placeLocation"
+      placeholder="Location"
+      readonly
+    />
+    <select id="placeCategory" name="placeCategory" required>
+      <option value="">Select Category</option>
+      <option value="restaurants">Restaurants</option>
+      <option value="bars">Clothing</option>
+      <option value="groceries">Groceries</option>
+      <option value="cleaning">Gyms</option>
+    </select>
+    <textarea
+      id="placeDescription"
+      name="placeDescription"
+      placeholder="Review"
+      required
+    ></textarea>
+  </form>
 
-    
+  <div class="modal-footer">
+    <button type="submit" form="addPlaceForm" class="post-button">Post</button>
+  </div>
 </div>
 
-<div id="eventDetailsModal" class="modal-secondary" style="display:none;">
-    <div class="modal-content">
-        <span class="close-button" onclick="closeEventDetailsModal()">&times;</span>
-        <form id="eventDetailsForm">
-            <input type="datetime-local" id="eventDateTime" required>
-            <div class="user-tagging">
-                <input type="text" id="userTagInput" placeholder="Tag Friends" oninput="showSuggestions(this.value)">
-                <div id="userSuggestions" class="suggestions"></div>
-            </div>
-            <div id="taggedUsersList"></div>
-            <input type="number" id="maxParticipants" required placeholder="Max Participants" min="1">
-            <textarea id="eventDescription" required placeholder="Event Description"></textarea>
-            <button type="submit">Create Event</button>
-        </form>
-    </div>
+<div id="eventDetailsModal" class="modal-secondary" style="display: none">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeEventDetailsModal()">&times;</span>
+    <form id="eventDetailsForm">
+      <input type="datetime-local" id="eventDateTime" required />
+      <div class="user-tagging">
+        <input
+          type="text"
+          id="userTagInput"
+          placeholder="Tag Friends"
+          oninput="showSuggestions(this.value)"
+        />
+        <div id="userSuggestions" class="suggestions"></div>
+      </div>
+      <div id="taggedUsersList"></div>
+      <input
+        type="number"
+        id="maxParticipants"
+        required
+        placeholder="Max Participants"
+        min="1"
+      />
+      <textarea
+        id="eventDescription"
+        required
+        placeholder="Event Description"
+      ></textarea>
+      <button type="submit">Create Event</button>
+    </form>
+  </div>
 </div>

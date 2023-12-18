@@ -1,89 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Urbaneer App Prototype</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
-</head>
-<body>
-
-<div class="phone-outline">
-  
-    <div class="status-bar">
-        <span id="current-time"></span>    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='search.css') }}"
+    />
+  </head>
+  <body>
+    <div class="phone-outline">
+      <div class="status-bar">
+        <span id="current-time"></span>
         <div class="status-icons">
-            <i class="fas fa-signal"></i>
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-battery-three-quarters"></i>
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-three-quarters"></i>
         </div>
-    </div>
+      </div>
 
-    <header class="app-header">
+      <header class="app-header">
         <h1 class="app-title">Urbaneer</h1>
         <div class="user-icon">
-            <a href="{{ url_for('activity') }}" class="nav-link">
-                <i class="fas fa-running fa-2x"></i>
-                <span class="activity-text">Activity</span>
-            </a>
+          <a href="{{ url_for('activity') }}" class="nav-link">
+            <i class="fas fa-running fa-2x"></i>
+            <span class="activity-text">Activity</span>
+          </a>
         </div>
-    </header>
+      </header>
 
-    <nav class="global-nav">
+      <nav class="global-nav">
         <ul class="nav-list">
-            <li class="nav-item active">Restaurants</li>
-            <li class="nav-item">Bars</li>
+          <li class="nav-item active">Restaurants</li>
+
+          <a href="{{ url_for('clothing') }}" class="nav-link">
+            <li class="nav-item">Clothing</li>
+          </a>
+
+          <a href="{{ url_for('groceries') }}" class="nav-link">
             <li class="nav-item">Groceries</li>
-            <li class="nav-item">Cleaning</li>
+          </a>
+
+          <a href="{{ url_for('gyms') }}" class="nav-link">
+            <li class="nav-item">Gyms</li>
+          </a>
         </ul>
-    </nav>
+      </nav>
 
-    <div class="content">
+      <div class="content">
         <div class="map-container">
-            <img src="{{ url_for('static', filename='image/fake_map_background.png') }}" alt="Map" class="map-image">
+          <img
+            src="{{ url_for('static', filename='image/fake_map_background.png') }}"
+            alt="Map"
+            class="map-image"
+          />
         </div>
-        <ul id="places-list" class="places-container"></ul>
-    </div>
+        <ul id="places-list" class="places-container" ></ul>
+      </div>
 
-  <div class="navigation-bar">
-    <div>
-      <a href="{{ url_for('home') }}" class="nav-link">
-        <i class="fas fa-home"></i>
-        <span>Home</span>
-      </a>
-    </div>
-    <div>
-      <a href="{{ url_for('events') }}" class="nav-link event-link">
-        <i class="fas fa-calendar-alt"></i>
-        <span>Events</span>
-      </a>
-    </div>
-    
-    <i class="fas fa-plus" id="addPlaceButton"></i>
-        <div id="addPlaceModal" class="modal" style="display:none;">
-            {% include 'searchComponent.html' %}
+      <div class="navigation-bar">
+        <div>
+          <a href="{{ url_for('home') }}" class="nav-link">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+        </div>
+        <!-- <div>
+          <a href="{{ url_for('events') }}" class="nav-link event-link">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Events</span>
+          </a>
+        </div> -->
+
+        <i class="fas fa-plus" id="addPlaceButton"></i>
+        <div id="addPlaceModal" class="modal" style="display: none">
+          {% include 'searchComponent.html' %}
         </div>
 
-    <div>
-      <a href="{{ url_for('messages') }}" class="nav-link message-link">
-        <i class="fas fa-comment-alt"></i>
-        <span class="message-text">Messages</span>
-      </a>
-    </div>
-    
-    <div>
-      <a href="{{ url_for('profile') }}" class="nav-link">
-        <i class="fas fa-user"></i>
-        <span>Profile</span>
-      </a>
-    </div>
-  </div>
+        <!-- <div>
+          <a href="{{ url_for('messages') }}" class="nav-link message-link">
+            <i class="fas fa-comment-alt"></i>
+            <span class="message-text">Messages</span>
+          </a>
+        </div> -->
 
-</div>
+        <div>
+          <a href="{{ url_for('profile') }}" class="nav-link">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+      </div>
+    </div>
 
-<script src="{{ url_for('static', filename='scripts.js') }}"></script>
-<script src="{{ url_for('static', filename='search.js') }}"></script>
-</body>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='search.js') }}"></script>
+  </body>
 </html>

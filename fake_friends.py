@@ -1,34 +1,27 @@
 fake_friends = [
-    {'name': 'Brian',
-    'image': 'brian.png',  
-    'info' : 'Good morning everyone'
+    {'name': 'Alex Johnson',
+    'image': "blankProfile.webp",  
     },
-    {'name': 'Chris',
-    'image': 'chris.png',  
-    'info' : 'I am Chris'
+    {'name': 'Emma Thompson',
+    'image': "blankProfile.webp",  
     },
-    {'name': 'Francis',
-    'image': 'eun.png',  
-    'info' : 'The King of Fighter'
+    {'name': 'Michael Brown',
+    'image': "blankProfile.webp",  
     },
-    {'name': 'Julia',
-    'image': 'julia.png',  
-    'info' : 'Hi it is Julia'
+    {'name': 'Sophia Martinez',
+    'image': "blankProfile.webp",  
     },
-    {'name': 'Mariah',
-    'image': 'mariah.png',  
-    'info' : 'The Queen of Christmas!'
+    {'name': 'Isabella Davis',
+    'image': "blankProfile.webp",  
     },
-    {'name': 'Taylor',
-    'image': 'taylor.png', 
-    'info' : 'The Eras Tour'
+    {'name': 'Ethan Wilson',
+    'image': "blankProfile.webp", 
     },
-    {'name': 'Whitney',
-    'image': 'whitney.png', 
-    'info' : 'The Voice'
+    {'name': 'Olivia Garcia',
+    'image': "blankProfile.webp", 
     },
-    {'name': 'Will',
-    'image': 'will.png',  
-    'info' : 'It is Will'
+    {'name': 'Liam Anderson',
+    'image': "blankProfile.webp",
+
     },
 ]

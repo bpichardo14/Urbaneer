@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify, request
-from fake_data import fake_places, friends_places
+from fake_data import fake_places, friends_places, grocery_stores, gyms, clothing_stores, fake_saved
 from fake_friends import fake_friends
 from fake_activity import fake_activity
 from fake_contact import fake_contact
@@ -13,9 +13,37 @@ app = Flask(__name__)
 def get_places():
     return jsonify(fake_places)
 
+@app.route('/api/grocery_stores')
+def get_grocery_stores():
+    return jsonify(grocery_stores)
+
+@app.route('/api/gyms')
+def get_gyms():
+    return jsonify(gyms)
+
+@app.route('/api/clothing_stores')
+def get_clothing_stores():
+    return jsonify(clothing_stores)
+
+@app.route('/data/saved')
+def get_saved():
+    return jsonify(fake_saved)
+
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/clothing')
+def clothing():
+    return render_template('clothing.html')
+
+@app.route('/groceries')
+def groceries():
+    return render_template('groceries.html')
+
+@app.route('/gyms')
+def gyms():
+    return render_template('gyms.html')
 
 @app.route('/activity')
 def activity():
@@ -45,6 +73,10 @@ def events():
 def messages():
     return render_template('messages.html', friends=group_chat)
 
+@app.route('/saved')
+def saved():
+    return render_template('saved.html', fake_places=fake_saved)
+
 @app.route('/place/<name>')
 def show_place(name):
     place = next((item for item in fake_places if item["name"] == name), None)
@@ -71,4 +103,4 @@ def text_screen():
     return render_template('text_screen.html', selected_contact_name=contact_name)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="localhost", port=5000)

@@ -1,7 +1,7 @@
 body,
 html {
   margin: 0;
-  padding: 0;
+  padding-top: 40px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   background: #f0f0f0;
@@ -265,8 +265,8 @@ html {
 .place-detail-info {
   text-align: left;
   padding: 0 20px;
-  margin-top: 10px;
-  background-color: #f8f8f8;
+  margin-top: 20px;
+  background-color: #e8e8e8;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 300px;
@@ -358,4 +358,28 @@ html {
 .activity-text {
   font-size: 11px;
   margin-left: -8px;
+}
+
+.like-heart {
+  top: 10px;
+  left: 10px; /* Adjust as needed */
+  padding-top: 10px;
+  cursor: pointer;
+  z-index: 10;
+  padding-right: 50px;
+}
+
+.like-heart.liked {
+  color: red; /* Color when liked */
+}
+
+.like-bookmark {
+  top: 10px;
+  left: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.like-bookmark.bookmarked {
+  color: #cca000;
 }

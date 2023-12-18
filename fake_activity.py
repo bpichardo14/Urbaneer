@@ -1,26 +1,26 @@
 fake_activity = [
-    {'name': 'Brian',
-    'activity' : 'Brian liked UI Design.'
+    {'name': 'Alex Johnson',
+     'activity': 'Alex liked Amity Hall.'
     },
-    {'name': 'Taylor',
-    'activity' : 'Taylor liked Amity Hall, a Bar.'
+    {'name': 'Jordan Smith',
+     'activity': 'Jordan liked The Heights.'
     },
-    {'name': 'Chris',
-    'activity' : 'Chris followed Max.'
+    {'name': 'Sam Lee',
+     'activity': 'Sam followed Max.'
     },
-    {'name': 'Whitney',
-    'activity' : 'Whitney saved H-Mart, a Grocery Store.'
+    {'name': 'Morgan Brown',
+     'activity': 'Morgan saved Harlem Haberdashery'
     },
-    {'name': 'Will',
-    'activity' : 'Will followed Witney and Mariah.'
+    {'name': 'Pat Kim',
+     'activity': 'Pat followed Max and Grace.'
     },
-    {'name': 'Mariah',
-    'activity' : 'Mariah followed Witney.'
+    {'name': 'Casey Davis',
+     'activity': 'Casey followed Devin.'
     },
-    {'name': 'Francis',
-    'activity' : 'Francis liked The Heights.'
+    {'name': 'Jamie Garcia',
+     'activity': 'Jamie liked The Heights.'
     },
-    {'name': 'Julia',
-    'activity' : 'Julia followed Taylor.'
+    {'name': 'Taylor Martinez',
+     'activity': 'Taylor followed Jordan.'
     },
 ]
